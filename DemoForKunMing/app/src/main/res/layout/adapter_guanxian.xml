@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/tv1_guanxian"
+        android:gravity="center"
+        android:text="leixing"
+        android:background="#dddddd"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/tv2_guanxian"
+        android:gravity="center"
+        android:text="caizhi" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/tv3_guanxian"
+        android:gravity="center"
+        android:text="guanjing"
+        android:layout_marginTop="5dp"
+        android:background="#dddddd"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv4_guanxian"
+        android:gravity="center"
+        android:text="quanshudanwei"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>

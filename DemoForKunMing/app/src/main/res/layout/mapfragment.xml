@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="哨关路综合管廊监测监控系统"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:background="#2291e3"
+        android:id="@+id/textview"
+        android:textColor="#ffffff"
+        android:fitsSystemWindows="true"
+        android:clipToPadding="false"
+        />
+    <com.baidu.mapapi.map.MapView
+        android:layout_below="@+id/textview"
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/dingwei"
+        android:src="@drawable/orientate"
+        android:id="@+id/orientate"
+
+        />
+    <Button
+        android:layout_marginLeft="10dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/button_satellite"
+        android:layout_above="@+id/orientate"
+        android:text="卫星图"
+        android:background="@drawable/dingwei"/>
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/button_2D"
+        android:layout_above="@+id/button_satellite"
+        android:background="@drawable/dingwei"
+        android:text="平面图"/>
+    <Spinner
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:id="@+id/spinner"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="85dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shebei_bg"
+        ></Spinner>
+
+
+</RelativeLayout>

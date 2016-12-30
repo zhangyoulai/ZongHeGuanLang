@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/tv1_jiedian"
+        android:text="jiedianname"
+        android:gravity="center"
+        android:background="#dddddd"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/tv2_jiedian"
+        android:text="jiedianleixing"
+        android:gravity="center"
+       />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/tv3_jiedian"
+        android:text="jiediansheshi"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="#dddddd"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="位置详情："
+
+        android:layout_marginTop="5dp"
+
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageview"
+        android:src="@mipmap/ic_launcher"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#2291e3"
+        android:gravity="center">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_gas_back"
+            android:background="@drawable/back"
+
+            /> <TextView
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="管廊气体详情图表"
+        android:textColor="#ffffff"
+        android:textSize="20sp"/>
+    </LinearLayout>
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="120dp"-->
+        <!--android:src="@drawable/o2"-->
+        <!--android:layout_marginTop="10dp"/>-->
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="120dp"-->
+        <!--android:src="@drawable/h2s"-->
+        <!--android:layout_marginTop="10dp"/>-->
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="120dp"-->
+        <!--android:src="@drawable/ch4"-->
+        <!--android:layout_marginTop="10dp"/>-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="5dp"
+    >
+    <Button
+        android:id="@+id/button_yangqi"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:text="O2"
+        android:gravity="center"
+        android:background="@drawable/shape_button_infoicon"/>
+    <Button
+        android:layout_marginLeft="5dp"
+        android:id="@+id/button_ch4"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:text="CH4"
+        android:gravity="center"
+        android:background="@drawable/shape_button_infoicon"/>
+    <Button
+        android:layout_marginLeft="5dp"
+        android:id="@+id/button_h2s"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:text="H2S"
+        android:gravity="center"
+        android:background="@drawable/shape_button_infoicon"/>
+</LinearLayout>
+   <ImageView
+       android:layout_marginTop="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/ig_gas"
+       android:src="@drawable/o2"/>
+
+
+
+</LinearLayout>

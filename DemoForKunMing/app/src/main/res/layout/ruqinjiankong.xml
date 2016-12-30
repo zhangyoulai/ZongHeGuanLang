@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="220dp"
+        android:layout_height="1dp" />
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bg_infowindow80"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:background="#dddddd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="有人侵入:"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="否"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:background="#dddddd"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="有物侵入:"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="否"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<Button-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:text="查看监控"-->
+        <!--android:id="@+id/button_ruqinjiankong"-->
+        <!--android:background="@drawable/shape_button_infoicon"/>-->
+
+</LinearLayout>

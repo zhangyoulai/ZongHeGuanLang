@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.melificent.demoforkunming.Activity.MainActivity"
+
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false"
+    >
+
+
+    <RelativeLayout
+        android:layout_below="@+id/textview"
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/linearlayout"
+            android:orientation="horizontal">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/radiogroup"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/map"
+                    android:text="地图"
+                    android:drawableTop="@drawable/selector_map"
+                    android:checked="true"
+                    android:button="@null"
+                    android:gravity="center"
+
+                    />
+
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/search"
+                    android:text="搜索"
+                    android:drawableTop="@drawable/selector_search"
+                    android:checked="false"
+                    android:button="@null"
+                    android:gravity="center"
+                    />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:text="运维"
+                    android:drawableTop="@drawable/selector_opration"
+                    android:checked="false"
+                    android:id="@+id/opration"/>
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:button="@null"
+                    android:drawableTop="@drawable/message_selector"
+                    android:checked="false"
+                    android:id="@+id/message"
+                    android:text="通知"/>
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewpager"
+            android:layout_above="@+id/linearlayout"
+           ></android.support.v4.view.ViewPager>
+
+    </RelativeLayout>
+
+</RelativeLayout>
