@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/radiogroup">
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ShangHai"
+        android:layout_weight="1"
+        android:id="@+id/shanghai"/>
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ShenZhen"
+        android:layout_weight="1"
+        android:id="@+id/shenzhen"/>
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hongkong"
+        android:layout_weight="1"
+        android:id="@+id/xianggang"/>
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="American"
+        android:layout_weight="1"
+        android:id="@+id/meiguo"/>
+</RadioGroup>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddddd"></View>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="gigNo"
+        android:id="@+id/gidNo"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddddd"></View>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="query"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/strock_query"/>
+</LinearLayout>

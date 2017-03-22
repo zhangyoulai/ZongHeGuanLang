@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#34b2bb">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/planeback"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="火车票"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="-20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginRight="85dp">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:background="@drawable/plane_button_shape"
+            android:text="按发到站"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:id="@+id/btn_train_bystation"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:background="@drawable/plane_name_shape"
+            android:text="按名称"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:id="@+id/btn_train_byname"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/plane_query"
+        android:orientation="vertical"
+        android:id="@+id/train_station_field">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_marginTop="20dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="上海"
+                android:gravity="center"
+                android:id="@+id/train_strat"
+
+                />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/trainzhuanhuan"
+                android:layout_marginTop="8dp"/>
+            <EditText
+                android:layout_marginTop="20dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="北京"
+                android:gravity="center"
+                android:id="@+id/train_end"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3月22日"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/train_nextDate"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="后天"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="160dp"
+                android:textColor="#ff9406"
+                android:textSize="18sp"
+                />
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/more"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/plane_query"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/train_name_field">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+            <EditText
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="上海"
+                android:gravity="center"
+                android:id="@+id/train_name"
+
+                />
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="查   询"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/plane_query_btn_shape"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/train_query"
+        />
+
+
+</LinearLayout>

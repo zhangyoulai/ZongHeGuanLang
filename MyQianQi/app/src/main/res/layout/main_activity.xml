@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<fragment
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:name="com.example.melificent.myqianqi.Fragment.City_Fragment"
+    android:id="@+id/city_fragment"></fragment>
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:name="com.example.melificent.myqianqi.Fragment.MyHomeFragment"
+        android:id="@+id/my_home"></fragment>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_gravity="bottom"
+        android:background="#f7f7f5">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/city_linearlayout"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/btn_city"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/chengshi_bottom"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="城市频道"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="16sp"
+                android:textColor="#1eb6b7"
+                android:id="@+id/city_title"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:id="@+id/home_linearlayout">
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+
+                android:id="@+id/btn_home"
+
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center_vertical"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的家园"
+                android:textSize="16sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/myhome_title"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
