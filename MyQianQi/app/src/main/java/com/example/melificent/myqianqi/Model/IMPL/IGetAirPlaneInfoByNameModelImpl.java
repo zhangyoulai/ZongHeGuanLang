@@ -33,6 +33,7 @@ public class IGetAirPlaneInfoByNameModelImpl implements IGetAirPlaneInfoByNameMo
             public void onResponse(Response<AirPlaneInfoBeanByName> response, Retrofit retrofit) {
                 AirPlaneInfoBeanByName airPlaneInfoBeanByName = response.body();
                 Log.i("airplaneinfobeanbyname", "onResponse: "+airPlaneInfoBeanByName);
+                Log.i("airplanequeryerrorcode", "onResponse: "+airPlaneInfoBeanByName.error_code);
                 if (airPlaneInfoBeanByName.error_code == 0){
                     asyncCallBack.OnSucess(airPlaneInfoBeanByName.result);
                 }else {

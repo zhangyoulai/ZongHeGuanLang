@@ -46,7 +46,7 @@ public class IGetVehicleViolationInfoModelImpl implements IGetVehicleViolationIn
                         GlobalContants.NoVehicleViolationBehavior = true;
                         asyncCallBack.OnSucess(vehicleViolation.reason);
                     }else {
-                        asyncCallBack.OnSucess(vehicleViolation.results);
+                        asyncCallBack.OnSucess(vehicleViolation.result);
                     }
                 }else {
                     Log.i(TAG, "onError: "+vehicleViolation.reason);

@@ -20,13 +20,13 @@ import retrofit.Retrofit;
 
 public class IGetTrainInfoByStationModelImpl implements IGetTrainInfoByStationModel {
     @Override
-    public void getTrainInfo(String start, String end, final AsyncCallBack callBack) {
+    public void getTrainInfo(String start, String end,String date, final AsyncCallBack callBack) {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(GlobalContants.getTrainInfoByStationBaseURL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         GetTrainInfoByStationApiService service = retrofit.create(GetTrainInfoByStationApiService.class);
-        Call<TrainInfoBeanByStation> call = service.getTrainInfoBeanByStation(start,end);
+        Call<TrainInfoBeanByStation> call = service.getTrainInfoBeanByStation(start,end,date);
         call.enqueue(new Callback<TrainInfoBeanByStation>() {
             @Override
             public void onResponse(Response<TrainInfoBeanByStation> response, Retrofit retrofit) {

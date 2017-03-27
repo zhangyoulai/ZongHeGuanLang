@@ -41,7 +41,7 @@ public class TrainInfoByStationActivity extends AppCompatActivity implements Get
         query.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.getTrainInfoByStation(start.getText().toString().trim(),end.getText().toString().trim());
+                presenter.getTrainInfoByStation(start.getText().toString().trim(),end.getText().toString().trim(),"");
             }
         });
     }

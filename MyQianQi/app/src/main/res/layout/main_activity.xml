@@ -14,20 +14,25 @@
         android:layout_weight="1"
         android:name="com.example.melificent.myqianqi.Fragment.MyHomeFragment"
         android:id="@+id/my_home"></fragment>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="5dp"
-        android:paddingTop="5dp"
         android:layout_gravity="bottom"
-        android:background="#f7f7f5">
+        android:background="#f7f7f5"
+
+        >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:id="@+id/city_linearlayout"
             android:orientation="horizontal"
-            android:paddingTop="8dp">
+            android:paddingTop="8dp"
+
+            android:layout_gravity="center_vertical">
             <ImageButton
                 android:layout_width="30dp"
                 android:layout_height="30dp"
@@ -49,15 +54,20 @@
         </LinearLayout>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher"/>
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/logo_bottom"
+            />
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingTop="8dp"
-            android:id="@+id/home_linearlayout">
+            android:id="@+id/home_linearlayout"
+
+            android:layout_gravity="center_vertical"
+            >
             <ImageButton
                 android:layout_width="30dp"
                 android:layout_height="30dp"

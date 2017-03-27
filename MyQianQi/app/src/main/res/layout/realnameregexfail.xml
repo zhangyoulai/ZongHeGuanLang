@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efeff4">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#34b2bb">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/planeback"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/realnameregexfailgoback"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="实名认证"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/plane_start_station_byname"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/unsusccess" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#56c5c7"
+        android:textSize="18sp"
+        android:text="认证失败！信息不匹配"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/try_agian"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/plane_query_btn_shape"
+        android:text="重新认证"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/regexfailshape"
+            android:src="@drawable/giveupnow"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/notnow"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂不认证"
+            android:textSize="20sp"
+            android:textColor="#56c5c7"
+            android:layout_marginTop="26dp"
+            android:layout_marginLeft="140dp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

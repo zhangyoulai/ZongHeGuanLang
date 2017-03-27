@@ -7,5 +7,5 @@ import com.example.melificent.myqianqi.AsyncCallBack;
  */
 
 public interface IGetAirPlaneInfoByStationModel {
-    public void getAirPlaneInfoByStation(String start, String end, AsyncCallBack asyncCallBack);
+    public void getAirPlaneInfoByStation(String start, String end,String date, AsyncCallBack asyncCallBack);
 }

@@ -1,10 +1,14 @@
 package com.example.melificent.myqianqi.Bean.WeatherBean;
 
+import java.io.Serializable;
+
 /**
  * Created by p on 2017/3/14.
  */
-public class Data {
-            public String cw;
+public class Data implements Serializable {
+    private static final long serialVersionUID =32L;
+
+    public String cw;
             public String w;
             public int rh;
             public String cwd;

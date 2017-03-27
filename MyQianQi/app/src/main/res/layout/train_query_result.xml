@@ -11,7 +11,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/planeback"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            android:id="@+id/trainstationgoback"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,57 +49,67 @@
             android:textColor="#ffffff"
             android:id="@+id/train_total_size"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="#b5d9e2"
-        >
+        android:background="#b5d9e2">
+
         <LinearLayout
+            android:id="@+id/train_result_station_beforedate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical">
+
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/date_goback"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
-                android:layout_gravity="center_vertical"/>
+                android:src="@drawable/date_goback" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="前一天"
-                android:layout_gravity="center_vertical"/>
+                android:layout_gravity="center_vertical"
+                android:text="前一天" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="170dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/plane_query">
+
             <TextView
+                android:id="@+id/train_bystation_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="03月22日"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
-                android:textColor="#000000"
-                android:id="@+id/train_bystation_date"/>
+                android:text="03月22日"
+                android:textColor="#000000" />
+
             <TextView
                 android:layout_width="1dp"
 
                 android:layout_height="match_parent"
-                android:background="#cbcbcb"
-                android:layout_marginLeft="40dp"/>
+                android:layout_marginLeft="40dp"
+                android:background="#cbcbcb" />
+
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/rili"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
-                android:layout_gravity="center_vertical"/>
+                android:src="@drawable/rili"
+                android:id="@+id/train_station_result_calendar"/>
         </LinearLayout>
+
         <LinearLayout
+            android:id="@+id/train_result_station_nextdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical">
@@ -106,15 +117,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="后一天"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="20dp"/>
+                android:layout_marginLeft="20dp"
+                android:text="后一天" />
+
             <ImageView
                 android:layout_width="15dp"
                 android:layout_height="15dp"
-                android:src="@drawable/date_next"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="5dp"
-                android:layout_gravity="center_vertical"/>
+                android:src="@drawable/date_next" />
         </LinearLayout>
     </LinearLayout>
 

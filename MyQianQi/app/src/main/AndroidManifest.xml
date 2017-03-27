@@ -28,18 +28,20 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Activity.FrameActivity">
+        <activity android:name=".Activity.Welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".Activity.FrameActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
         <activity android:name=".Activity.Webpage"
             android:configChanges="orientation|keyboardHidden"
             android:exported="true" />
@@ -65,6 +67,51 @@
             android:configChanges="orientation|keyboardHidden"
             android:exported="true" />
         <activity android:name=".Activity.TrainQueryResultByNameActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.RegexActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.PassWordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.RegistSuccessActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.RegistFail"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.BroadcastChargeWebview"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.MobileChargeWebpager"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.ElectricChargeWebview"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.ExpressQueryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.ExpressQueryResultActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.AirplaneQueryNameResultActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.VehicleViolationResultActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.VehicleViolationQueryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.TourismWebview"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.SheBao"
             android:configChanges="orientation|keyboardHidden"
             android:exported="true" />
     </application>

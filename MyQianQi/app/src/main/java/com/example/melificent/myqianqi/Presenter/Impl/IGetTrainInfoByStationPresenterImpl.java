@@ -23,8 +23,8 @@ public class IGetTrainInfoByStationPresenterImpl implements IGetTrainInfoByStati
     }
 
     @Override
-    public void getTrainInfoByStation(String start, String end) {
-            model.getTrainInfo(start, end, new AsyncCallBack() {
+    public void getTrainInfoByStation(String start, String end,String date) {
+            model.getTrainInfo(start, end, date,new AsyncCallBack() {
                 @Override
                 public void OnSucess(Object object) {
                     List<TrainInfoByStationResultList> lists = (List<TrainInfoByStationResultList>) object;

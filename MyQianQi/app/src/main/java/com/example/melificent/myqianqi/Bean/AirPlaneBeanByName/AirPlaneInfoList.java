@@ -1,9 +1,12 @@
 package com.example.melificent.myqianqi.Bean.AirPlaneBeanByName;
 
+import java.io.Serializable;
+
 /**
  * Created by p on 2017/3/16.
  */
-public class AirPlaneInfoList {
+public class AirPlaneInfoList implements Serializable {
+        private static final long serialVersionUID =22L;
     public String qf;
             public String qf_city;
             public String qf_citycode;

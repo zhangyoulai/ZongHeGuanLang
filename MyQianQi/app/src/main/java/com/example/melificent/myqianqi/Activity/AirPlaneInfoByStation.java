@@ -42,7 +42,7 @@ public class AirPlaneInfoByStation extends AppCompatActivity implements GetAirPl
         query.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.getAirPlaneInfoByStation(start.getText().toString().trim(),end.getText().toString().trim());
+                presenter.getAirPlaneInfoByStation(start.getText().toString().trim(),end.getText().toString().trim(),"");
             }
         });
 

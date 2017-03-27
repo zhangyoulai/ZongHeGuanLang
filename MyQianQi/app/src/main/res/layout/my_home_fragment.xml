@@ -9,7 +9,10 @@
 
    <ScrollView
        android:layout_width="match_parent"
-       android:layout_height="match_parent">
+       android:layout_height="match_parent"
+       android:layout_alignParentTop="true"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true">
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="match_parent"
@@ -32,12 +35,13 @@
                  android:layout_height="100dp"
                  android:background="@drawable/tou"
                  android:layout_gravity="center"
-                 android:id="@+id/head_portrait"/>
+                 android:id="@+id/head_portrait"
+                 />
              <TextView
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_gravity="center"
-                 android:text="赵乐乐"
+                 android:text="登录"
                  android:textColor="#666666"
                  android:textSize="18sp"
                  android:id="@+id/real_name"
@@ -114,7 +118,8 @@
                    android:orientation="horizontal"
                    android:layout_marginTop="10dp"
                    android:layout_marginBottom="10dp"
-                   android:layout_marginLeft="10dp">
+                   android:layout_marginLeft="10dp"
+                   android:id="@+id/shebao">
                    <ImageView
                        android:layout_width="30dp"
                        android:layout_height="30dp"
@@ -367,7 +372,8 @@
                    android:orientation="horizontal"
                    android:layout_marginTop="10dp"
                    android:layout_marginBottom="10dp"
-                   android:layout_marginLeft="10dp">
+                   android:layout_marginLeft="10dp"
+                   android:id="@+id/car">
                    <ImageView
                        android:layout_width="30dp"
                        android:layout_height="30dp"
@@ -389,7 +395,8 @@
                         android:layout_marginLeft="212dp"
                         android:layout_gravity="center_vertical"
                         android:textSize="14sp"
-                        android:textColor="#f78c00"/>
+                        android:textColor="#f78c00"
+                        android:id="@+id/car_Add"/>
                    <ImageView
                        android:layout_width="18dp"
                        android:layout_height="18dp"
@@ -446,7 +453,8 @@
                    android:orientation="horizontal"
                    android:layout_marginTop="10dp"
                    android:layout_marginBottom="10dp"
-                   android:layout_marginLeft="10dp">
+                   android:layout_marginLeft="10dp"
+                   android:id="@+id/electric_charge">
                    <ImageView
                        android:layout_width="30dp"
                        android:layout_height="30dp"
@@ -518,7 +526,8 @@
                    android:orientation="horizontal"
                    android:layout_marginTop="10dp"
                    android:layout_marginBottom="10dp"
-                   android:layout_marginLeft="10dp">
+                   android:layout_marginLeft="10dp"
+                   android:id="@+id/broadcast_charge">
                    <ImageView
                        android:layout_width="30dp"
                        android:layout_height="30dp"
@@ -554,7 +563,8 @@
                    android:orientation="horizontal"
                    android:layout_marginTop="10dp"
                    android:layout_marginBottom="10dp"
-                   android:layout_marginLeft="10dp">
+                   android:layout_marginLeft="10dp"
+                   android:id="@+id/mobile_charge">
                    <ImageView
                        android:layout_width="30dp"
                        android:layout_height="30dp"

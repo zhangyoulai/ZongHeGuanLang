@@ -1,10 +1,13 @@
 package com.example.melificent.myqianqi.Bean.EveryHourWeather;
 
+import java.io.Serializable;
+
 /**
  * Created by p on 2017/3/21.
  */
-public class Series {
-       public String cw;
+public class Series implements Serializable {
+     private static final long serialVersionUID =34L;
+     public String cw;
             public String w;
             public int rh;
             public String cwd;

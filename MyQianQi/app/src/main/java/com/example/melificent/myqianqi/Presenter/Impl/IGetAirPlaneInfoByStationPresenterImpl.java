@@ -23,8 +23,8 @@ public class IGetAirPlaneInfoByStationPresenterImpl implements IGetAirPlaneInfoB
     }
 
     @Override
-    public void getAirPlaneInfoByStation(String start, String end) {
-        model.getAirPlaneInfoByStation(start, end, new AsyncCallBack() {
+    public void getAirPlaneInfoByStation(String start, String end,String date) {
+        model.getAirPlaneInfoByStation(start, end, date,new AsyncCallBack() {
             @Override
             public void OnSucess(Object object) {
                 List<AirPlaneInfoByStationResult> results = (List<AirPlaneInfoByStationResult>) object;

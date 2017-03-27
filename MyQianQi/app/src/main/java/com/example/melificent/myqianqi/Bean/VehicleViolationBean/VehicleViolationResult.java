@@ -1,9 +1,12 @@
 package com.example.melificent.myqianqi.Bean.VehicleViolationBean;
 
+import java.io.Serializable;
+
 /**
  * Created by p on 2017/3/15.
  */
-public class VehicleViolationResult {
+public class VehicleViolationResult implements Serializable {
+    private static final long serialVersionUID =26L;
     public String time;//违章时间
     public double fine;//罚款金额
     public String carNo;//车牌号

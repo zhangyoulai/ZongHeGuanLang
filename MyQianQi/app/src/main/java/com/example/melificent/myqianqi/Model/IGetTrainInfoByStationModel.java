@@ -7,5 +7,5 @@ import com.example.melificent.myqianqi.AsyncCallBack;
  */
 
 public interface IGetTrainInfoByStationModel {
-    public  void getTrainInfo(String start, String end, AsyncCallBack callBack);
+    public  void getTrainInfo(String start, String end,String date, AsyncCallBack callBack);
 }

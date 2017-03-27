@@ -5,5 +5,5 @@ package com.example.melificent.myqianqi.Presenter;
  */
 
 public interface IGetAirPlaneInfoByStationPresenter {
-    public void getAirPlaneInfoByStation(String start,String end);
+    public void getAirPlaneInfoByStation(String start,String end,String date);
 }

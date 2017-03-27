@@ -8,6 +8,6 @@ import java.util.List;
 
 public class VehicleViolation {
     public String reason;
-    public List<VehicleViolationResult> results;
+    public List<VehicleViolationResult> result;
     public int error_code ;
 }

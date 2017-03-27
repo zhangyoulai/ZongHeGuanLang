@@ -23,13 +23,13 @@ import retrofit.Retrofit;
 public class IGetAirPlaneInfoByStationModelImpl implements IGetAirPlaneInfoByStationModel {
 
     @Override
-    public void getAirPlaneInfoByStation(String start, String end, final AsyncCallBack asyncCallBack) {
+    public void getAirPlaneInfoByStation(String start, String end,String date, final AsyncCallBack asyncCallBack) {
         Retrofit retrofit =new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(GlobalContants.getAirPlaneInfoByStationBaseURL)
                 .build();
         GetAirPlaneInfoByStationApiService service=retrofit.create(GetAirPlaneInfoByStationApiService.class);
-        Call<AirPlaneInfoBeanByStation> call = service.getAirPlaneInfoBeanByStation(start,end);
+        Call<AirPlaneInfoBeanByStation> call = service.getAirPlaneInfoBeanByStation(start,end,date);
         call.enqueue(new Callback<AirPlaneInfoBeanByStation>() {
             @Override
             public void onResponse(Response<AirPlaneInfoBeanByStation> response, Retrofit retrofit) {

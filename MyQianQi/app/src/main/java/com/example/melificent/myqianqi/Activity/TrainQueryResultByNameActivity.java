@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.melificent.myqianqi.Adapter.Train_byName_Adapter;
@@ -39,6 +41,8 @@ public class TrainQueryResultByNameActivity extends AppCompatActivity {
     TextView name;
     @InjectView(R.id.plane_result_byname)
     RecyclerView recyclerView;
+    @InjectView(R.id.trainnamegoback)
+    ImageView back;
     TrainInfoResult result;
     Train_byName_Adapter adapter;
     List<Station_List> lists;
@@ -52,6 +56,12 @@ public class TrainQueryResultByNameActivity extends AppCompatActivity {
         getData();
         setTextForTextView();
         setRecycleViewAdapter();
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void setRecycleViewAdapter() {
@@ -74,4 +84,6 @@ public class TrainQueryResultByNameActivity extends AppCompatActivity {
         result = (TrainInfoResult) intent.getSerializableExtra("TrainInfoResult");
         lists = result.station_list;
     }
+
+
 }

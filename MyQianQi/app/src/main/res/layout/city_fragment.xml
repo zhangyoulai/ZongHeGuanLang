@@ -103,7 +103,7 @@
                     android:layout_gravity="center_vertical"/>
                 <TextView
                     android:layout_marginLeft="2dp"
-                    android:layout_width="1dp"
+                    android:layout_width="0.6dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
@@ -114,31 +114,50 @@
                     android:orientation="vertical"
                     android:layout_marginLeft="2dp"
                     android:layout_marginRight="2dp">
-                    <TextView
 
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="多云15℃/5℃"
-                        android:textColor="#000000"
-                        android:textSize="12sp"
-                        android:id="@+id/weather_change_area_and_description"
-                        />
+                        android:layout_gravity="center_horizontal">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="多云"
+                            android:textColor="#000000"
+                            android:textSize="12sp"
+                            android:id="@+id/weather_description"
+                            />
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15℃/5℃"
+                            android:textColor="#000000"
+                            android:textSize="12sp"
+                            android:id="@+id/weather_change_area_and_description"
+                            />
+                    </LinearLayout>
+
                     <TextView
-                        android:paddingLeft="10dp"
-                        android:paddingTop="3dp"
-                        android:paddingBottom="3dp"
-                        android:layout_width="match_parent"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_width="70dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/air_quality_shape"
                         android:text="良 99"
-                        android:layout_marginRight="30dp"
+                        android:layout_marginRight="10dp"
                         android:layout_marginBottom="2dp"
                         android:textSize="12sp"
                         android:textColor="#ffffff"
-                        android:id="@+id/air_quality"/>
+                        android:id="@+id/air_quality"
+                        android:gravity="center"/>
                 </LinearLayout>
                 <TextView
-                    android:layout_width="1dp"
+                    android:layout_width="0.6dp"
                     android:layout_height="match_parent"
                     android:background="#cbcbcb"
                     android:layout_marginBottom="5dp"
@@ -157,7 +176,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#86a702"
-                        android:text="96"
+                        android:text="20"
                         android:layout_gravity="center_horizontal"/>
                 </LinearLayout>
                 <LinearLayout
@@ -174,7 +193,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#86a702"
-                        android:text="141"
+                        android:text="55"
                         android:layout_gravity="center_horizontal"/>
                 </LinearLayout>
                 <LinearLayout
@@ -191,7 +210,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#86a702"
-                        android:text="13"
+                        android:text="7"
                         android:layout_gravity="center_horizontal"/>
                 </LinearLayout>
                 <LinearLayout
@@ -208,7 +227,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#86a702"
-                        android:text="65"
+                        android:text="7"
                         android:layout_gravity="center_horizontal"/>
                 </LinearLayout>
 
@@ -287,7 +306,7 @@
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.6dp"
                 android:background="#cbcbcb"/>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -345,7 +364,8 @@
                         android:layout_height="55dp"
                         android:layout_weight="1"
                         android:src="@drawable/wuliu_03"
-                        android:layout_gravity="center_horizontal"/>
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/express"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -385,7 +405,7 @@
 
                 >
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="5dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/l_01"
                     android:layout_marginLeft="20dp"/>
@@ -393,7 +413,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="交通"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:layout_gravity="center_vertical"
                     android:textColor="#000000"
                     android:layout_marginLeft="10dp"/>
@@ -403,11 +423,11 @@
                         android:layout_height="wrap_content"
                         android:text="更多"
                         android:layout_gravity="center_vertical"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:layout_marginLeft="200dp"/>
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@drawable/more"
                     android:layout_marginLeft="20dp"
                     android:layout_gravity="center_vertical"/>
@@ -415,7 +435,7 @@
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.6dp"
                 android:background="#cbcbcb"
 
                 />
@@ -441,7 +461,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="智慧交通"
-                            android:textSize="20sp"
+                            android:textSize="16sp"
                             android:textColor="#000000"
                             android:layout_marginTop="20dp"
                             />
@@ -451,17 +471,17 @@
                             android:text="方便出行"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="5dp"
-                            android:textSize="18sp"/>
+                            android:textSize="14sp"/>
                     </LinearLayout>
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/gongjiao"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
                         />
                 </LinearLayout>
                 <TextView
-                    android:layout_width="1dp"
+                    android:layout_width="0.6dp"
                     android:layout_height="match_parent"
                     android:background="#cbcbcb"
                     />
@@ -482,7 +502,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="汽车购票"
-                            android:textSize="20sp"
+                            android:textSize="16sp"
                             android:textColor="#000000"
                             android:layout_marginTop="20dp"
                             />
@@ -492,19 +512,19 @@
                             android:text="轻松购车票"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="5dp"
-                            android:textSize="18sp"/>
+                            android:textSize="14sp"/>
                     </LinearLayout>
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/qiche"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
                         />
                 </LinearLayout>
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.6dp"
                 android:background="#cbcbcb"
 
                 />
@@ -531,7 +551,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="火车票"
-                            android:textSize="20sp"
+                            android:textSize="16sp"
                             android:textColor="#000000"
                             android:layout_marginTop="20dp"
                             />
@@ -541,17 +561,17 @@
                             android:text="查询预定"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="5dp"
-                            android:textSize="18sp"/>
+                            android:textSize="14sp"/>
                     </LinearLayout>
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/huoche"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
                         />
                 </LinearLayout>
                 <TextView
-                    android:layout_width="1dp"
+                    android:layout_width="0.6dp"
                     android:layout_height="match_parent"
                     android:background="#cbcbcb"/>
                 <LinearLayout
@@ -571,7 +591,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="飞机票"
-                            android:textSize="20sp"
+                            android:textSize="16sp"
                             android:textColor="#000000"
                             android:layout_marginTop="20dp"
                             />
@@ -581,13 +601,13 @@
                             android:text="机票预定"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="5dp"
-                            android:textSize="18sp"/>
+                            android:textSize="14sp"/>
                     </LinearLayout>
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/feiji"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
                         />
                 </LinearLayout>
             </LinearLayout>
@@ -601,7 +621,7 @@
 
                 >
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="5dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/l_02"
                     android:layout_marginLeft="20dp"/>
@@ -609,7 +629,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="健康"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:layout_gravity="center_vertical"
                     android:textColor="#000000"
                     android:layout_marginLeft="10dp"/>
@@ -619,11 +639,11 @@
                     android:layout_height="wrap_content"
                     android:text="更多"
                     android:layout_gravity="center_vertical"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:layout_marginLeft="200dp"/>
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@drawable/more"
                     android:layout_marginLeft="20dp"
                     android:layout_gravity="center_vertical"/>
@@ -631,7 +651,7 @@
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.6dp"
                 android:background="#cbcbcb"
                 />
             <LinearLayout
@@ -652,36 +672,39 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="预约挂号"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textColor="#000000"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="专家名医提前挂号"
-                        android:textSize="18sp"
+                        android:textSize="14sp"
                         android:layout_marginTop="5dp"/>
                     <LinearLayout
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="15dp"
                         android:layout_width="120dp"
                         android:layout_height="30dp"
                         android:background="@drawable/yuyue"
-                        android:gravity="center">
+                        android:gravity="center"
+                        >
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="成功预约"/>
+                            android:text="成功预约"
+                            android:textSize="12sp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="12"
                             android:layout_marginLeft="2dp"
-                            android:textColor="#86a70a"/>
+                            android:textColor="#86a70a"
+                            android:textSize="12sp"/>
                         </LinearLayout>
 
                 </LinearLayout>
                 <TextView
-                    android:layout_width="1dp"
+                    android:layout_width="0.6dp"
                     android:layout_height="match_parent"
                     android:background="#cbcbcb"/>
                 <LinearLayout
@@ -722,7 +745,7 @@
                     </LinearLayout>
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
+                        android:layout_height="0.6dp"
                         android:background="#cbcbcb"/>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -768,7 +791,7 @@
                 android:paddingTop="5dp"
                 >
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="5dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/l_03"
                     android:layout_marginLeft="20dp"/>
@@ -776,7 +799,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="文化"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:layout_gravity="center_vertical"
                     android:textColor="#000000"
                     android:layout_marginLeft="10dp"/>
@@ -786,18 +809,18 @@
                     android:layout_height="wrap_content"
                     android:text="更多"
                     android:layout_gravity="center_vertical"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:layout_marginLeft="200dp"/>
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@drawable/more"
                     android:layout_marginLeft="20dp"
                     android:layout_gravity="center_vertical"/>
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.6dp"
                 android:background="#cbcbcb"
                 />
             <LinearLayout
@@ -815,7 +838,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:id="@+id/tourism">
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -844,7 +868,7 @@
                     </LinearLayout>
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
+                        android:layout_height="0.6dp"
                         android:background="#cbcbcb"/>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -881,7 +905,7 @@
                     </LinearLayout>
                 </LinearLayout>
                 <TextView
-                    android:layout_width="1dp"
+                    android:layout_width="0.6dp"
                     android:layout_height="match_parent"
                     android:background="#cbcbcb"/>
                 <LinearLayout
@@ -895,7 +919,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="看演出"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textColor="#000000"
                         android:layout_marginTop="10dp"/>
                     <ImageView
@@ -906,7 +930,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="带你娱乐每一天"
-                        android:textSize="18sp"/>
+                        android:textSize="14sp"/>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -919,7 +943,7 @@
 
                 >
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="5dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/l_04"
                     android:layout_marginLeft="20dp"/>
@@ -927,7 +951,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="财富"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:layout_gravity="center_vertical"
                     android:textColor="#000000"
                     android:layout_marginLeft="10dp"/>
@@ -937,18 +961,18 @@
                     android:layout_height="wrap_content"
                     android:text="更多"
                     android:layout_gravity="center_vertical"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:layout_marginLeft="200dp"/>
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@drawable/more"
                     android:layout_marginLeft="20dp"
                     android:layout_gravity="center_vertical"/>
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.6dp"
                 android:background="#cbcbcb"/>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -1000,7 +1024,7 @@
                     </LinearLayout>
                 </LinearLayout>
                 <TextView
-                    android:layout_width="1dp"
+                    android:layout_width="0.6dp"
                     android:layout_height="match_parent"
                     android:background="#cbcbcb"/>
 
@@ -1125,7 +1149,7 @@
                     </LinearLayout>
                 </LinearLayout>
                 <TextView
-                    android:layout_width="1dp"
+                    android:layout_width="0.6dp"
                     android:layout_height="match_parent"
                     android:background="#cbcbcb"/>
                 <LinearLayout
@@ -1157,7 +1181,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="万"
-
+                            android:layout_marginLeft="1dp"
                             />
                         <ImageView
                             android:layout_width="60dp"
@@ -1208,7 +1232,7 @@
 
                 >
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="5dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/l_05"
                     android:layout_marginLeft="20dp"/>
@@ -1216,7 +1240,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="公益"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:layout_gravity="center_vertical"
                     android:textColor="#000000"
                     android:layout_marginLeft="10dp"/>
@@ -1226,18 +1250,18 @@
                     android:layout_height="wrap_content"
                     android:text="更多"
                     android:layout_gravity="center_vertical"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:layout_marginLeft="200dp"/>
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@drawable/more"
                     android:layout_marginLeft="20dp"
                     android:layout_gravity="center_vertical"/>
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.6dp"
                 android:background="#cbcbcb"/>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -1256,14 +1280,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="智慧党建"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:textColor="#000000"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="网格元管理"
-                        android:textSize="18sp"
+                        android:textSize="14sp"
                         android:layout_marginTop="5dp"/>
                 </LinearLayout>
                 <ImageView
@@ -1275,7 +1299,7 @@
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.6dp"
                 android:background="#cbcbcb"/>
             <TextView
                 android:layout_width="match_parent"

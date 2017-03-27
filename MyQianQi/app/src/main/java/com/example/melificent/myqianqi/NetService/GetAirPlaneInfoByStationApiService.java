@@ -17,6 +17,7 @@ public interface GetAirPlaneInfoByStationApiService {
     @GET("?key=fd16273c518b8d319db290fdcc6017f7")
     Call<AirPlaneInfoBeanByStation> getAirPlaneInfoBeanByStation(
             @Query("start") String start,
-            @Query("end") String end
+            @Query("end") String end,
+            @Query("date") String date
     );
 }

@@ -20,8 +20,10 @@ import android.widget.Toast;
 
 import com.example.melificent.myqianqi.Activity.AirPlaneQueryActivity;
 import com.example.melificent.myqianqi.Activity.EconomicWebpager;
+import com.example.melificent.myqianqi.Activity.ExpressQueryActivity;
 import com.example.melificent.myqianqi.Activity.FunWebpager;
 import com.example.melificent.myqianqi.Activity.HeadlineNewsWebPager;
+import com.example.melificent.myqianqi.Activity.TourismWebview;
 import com.example.melificent.myqianqi.Activity.TrainQueryActivity;
 import com.example.melificent.myqianqi.Activity.Webpage;
 import com.example.melificent.myqianqi.Bean.EveryHourWeather.EveryHourResult;
@@ -53,7 +55,7 @@ import butterknife.InjectView;
  * Created by p on 2017/3/21.
  */
 
-public class City_Fragment extends Fragment implements ShowWeatherInfo,GetStrockIndex,GetEveryHourWeatherInfo {
+public class City_Fragment extends Fragment  {
     // field about viewpager
     @InjectView(R.id.news_viewpager)
     ViewPager news_viewpager;
@@ -76,10 +78,10 @@ public class City_Fragment extends Fragment implements ShowWeatherInfo,GetStrock
     @InjectView(R.id.now_tempreture)
     TextView now_Tempreture;
     @InjectView(R.id.air_quality)
-            TextView airquality;
-    IShowWeatherInfoPresenter presenter;
-    IGetEveryHourWeatherPresenter presenter_byHour;
-    Result result;
+    TextView airquality;
+    @InjectView(R.id.weather_description)
+    TextView description;
+//    Result result;
     String weather_w;
 
     // field about economic
@@ -107,9 +109,6 @@ public class City_Fragment extends Fragment implements ShowWeatherInfo,GetStrock
             LinearLayout shanghai1;
     @InjectView(R.id.shenzhen1)
             LinearLayout shenzhen1;
-    IGetStrockInfoPresenter presenter_Strock ;
-    int typeSHANGHAI = 0;
-    int typeSHENZHEN =1;
     List<StrockIndexResult> Strocklist = new ArrayList<>();
 
     //book airplane ticket
@@ -119,53 +118,16 @@ public class City_Fragment extends Fragment implements ShowWeatherInfo,GetStrock
     //book train ticket
     @InjectView(R.id.train)
     LinearLayout train;
-    public City_Fragment() {
-        presenter = new IShowWeatherInfoPresenterImpl(this);
-        presenter_Strock = new IGetStrockIndexResultPresenterImpl(this);
-        presenter_byHour = new IGetEveryHourWeatherPresenterImpl(this);
-    }
 
-    Handler MyHandler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what){
-                case 2:
-                    Bundle b =msg.getData();
-                    shenzhenzhishuPri.setText(b.getString("shenzhenPri"));
-                    break;
-                case 3:
-                    Bundle b1 = msg.getData();
-                    shenzhenzhishu.setText(b1.getString("shenzhen"));
-                    break;
-                case 4:
-                    Bundle b2 = msg.getData();
-                    shangzhengzhishu.setText(b2.getString("shanghai"));
-                    break;
-                case 5:
-                    Bundle b3 = msg.getData();
-                    shangzhengzhishuPri.setText(b3.getString("shanghaiPri"));
-                    break;
-                case 6:
-                    Bundle b4 =msg.getData();
-                    shangzhengdealNum.setText(b4.getString("shanghaidealNum"));
-                    break;
-                case 7:
-                    Bundle b5 = msg.getData();
-                    shangzhengdealPri.setText(b5.getString("shanghaidealPri"));
-                    break;
-                case 8:
-                    Bundle b6 = msg.getData();
-                    shenzhendealNum.setText(b6.getString("shenzhendealNum"));
-                    break;
-                case 9:
-                    Bundle b7 = msg.getData();
-                    shenzhendealPri.setText(b7.getString("shenzhendealPri"));
-                    break;
+    // express field
+    @InjectView(R.id.express)
+    ImageView express;
+
+    //tourism field
+    @InjectView(R.id.tourism)
+    LinearLayout tourism;
 
 
-            }
-        }
-    };
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -180,14 +142,165 @@ public class City_Fragment extends Fragment implements ShowWeatherInfo,GetStrock
         //movie link
         LinkToMovie();
         //weather about
-        ShowWeatherInformations();
+        GetWeatherInformationFromWelcome();
         //economic about
         GetEconomicInfo();
+        GetEconomicInfoFromWelcome();
         //airplane ticket book and query
         BookAirPlaneTicketAndQuery();
         //train ticket book and query
         BookTrainTicketAndQuery();
+        //express about
+        ExpressInfo();
+        //tourism about
+        LinkToTourism();
         return view;
+    }
+
+    private void GetWeatherInformationFromWelcome() {
+        Intent intent = getActivity().getIntent();
+        Result result = (Result) intent.getSerializableExtra("weather");
+        EveryHourResult everyHourResult = (EveryHourResult) intent.getSerializableExtra("everyHourweather");
+        if (result != null){
+            weather_w = result.data.w;
+            description.setText(weather_w);
+            Log.i("weather_w", "weather_w: "+weather_w);
+            Log.i("showeatherinfo", "showWeatherInfo: "+result.data.tmp);
+            now_Tempreture.setText(result.data.tmp+"℃");
+            int aqi  = result.data.aqi;
+            Log.i("aqicount", "showWeatherInfo: "+aqi);
+            if (0<aqi && aqi<50){
+                airquality.setText("优 "+aqi);
+            }else if (aqi>= 50 && aqi<100){
+                airquality.setText("良 "+aqi);
+            }else if (aqi>= 100 && aqi< 150){
+                airquality.setText("轻度 "+aqi);
+            }else if (aqi>=150 && aqi< 200){
+                airquality.setText("中度 "+aqi);
+            }else if (aqi>= 200 && aqi< 300 ){
+                airquality.setText("重度 "+aqi);
+            }else {
+                airquality.setText("严重 "+aqi);
+            }
+        }
+
+        if (everyHourResult != null){
+            List<Series> list_series = new ArrayList<>();
+            list_series = everyHourResult.series;
+            int [] tem = new int[25] ;
+            for (int i=0;i<list_series.size();i++){
+                tem[i] = list_series.get(i).tmp;
+            }
+            Arrays.sort(tem);
+            Log.i("weatherOrder", "getMax: "+tem[24]+" ,getMin:" +tem[0]);
+            String weather_predict;
+            if (result.data.tmp>tem[24]){
+                weather_predict =tem[0]+"℃"+"/"+result.data.tmp+"℃";
+            }else {
+                weather_predict =tem[0]+"℃"+"/"+tem[24]+"℃";
+
+            }
+
+            Log.i("weather_predict", "weather_predict: "+weather_predict);
+            weather.setText(weather_predict);
+        }
+
+    }
+
+    private void GetEconomicInfoFromWelcome() {
+        Intent intent = getActivity().getIntent();
+        Strocklist = (List<StrockIndexResult>) intent.getSerializableExtra("strockIndex");
+        if (Strocklist.size() >0){
+            shenzhenzhishu.setText(Strocklist.get(0).increPer+"%");
+            shenzhenzhishuPri.setText(Strocklist.get(0).nowpri.substring(0,Strocklist.get(0).nowpri.length()-1));
+            shangzhengzhishu.setText(Strocklist.get(1).increPer+"%");
+            shangzhengzhishuPri.setText(Strocklist.get(1).nowpri.substring(0,Strocklist.get(1).nowpri.length()-2));
+            if (Strocklist.get(1).dealNum.length()<=4){
+                shangzhengdealNum.setText("0."+Strocklist.get(1).dealNum);
+
+            }else {
+                shangzhengdealNum.setText(Strocklist.get(1).dealNum.substring(0,Strocklist.get(1).dealNum.length()-4)+"."+Strocklist.get(1).dealNum.substring(Strocklist.get(1).dealNum.length()-4,Strocklist.get(1).dealNum.length()-2));
+            }
+
+            String dealprice= Strocklist.get(1).dealPri;
+            if (dealprice.length()== 8 ){
+                shangzhengdealPri.setText("0."+dealprice.substring(0,4));
+
+            }
+            else if (dealprice.length() == 7){
+                shangzhengdealPri.setText("0.0"+dealprice.substring(0,3));
+
+            }else  if (dealprice.length() == 6){
+                shangzhengdealPri.setText("0.00"+dealprice.substring(0,2));
+
+            }else if (dealprice.length() == 5){
+                shangzhengdealPri.setText("0.000"+dealprice.substring(0,1));
+
+            }
+            else if (dealprice.length()<5){
+                shangzhengdealPri.setText("0.0000");
+
+            }else {
+                shangzhengdealPri.setText(dealprice.substring(0,dealprice.length()-8)+"."+dealprice.substring(dealprice.length()-8,dealprice.length()-6));
+
+            }
+
+            if (Strocklist.get(0).dealNum.length()<=4){
+                shenzhendealNum.setText("0."+Strocklist.get(0).dealNum);
+
+            }else {
+                shenzhendealNum.setText(Strocklist.get(0).dealNum.substring(0,Strocklist.get(0).dealNum.length()-4)+"."+Strocklist.get(0).dealNum.substring(Strocklist.get(0).dealNum.length()-4,Strocklist.get(0).dealNum.length()-2));
+
+            }
+
+            String dealplriceShenzhen = Strocklist.get(0).dealPri.split("\\.")[0];
+            Log.i("ShenzhenDealprice", "run: "+Strocklist.get(0).dealPri);
+
+
+            if (dealplriceShenzhen.length() == 8){
+                shenzhendealPri.setText("0."+dealplriceShenzhen.substring(0,4));
+
+            }else if (dealplriceShenzhen.length() ==7){
+                shenzhendealPri.setText("0.0"+dealplriceShenzhen.substring(0,3));
+
+            }else if (dealplriceShenzhen.length() ==6){
+                shenzhendealPri.setText("0.00"+dealplriceShenzhen.substring(0,2));
+
+            }else if (dealplriceShenzhen.length() ==5){
+                shenzhendealPri.setText("0.000"+dealplriceShenzhen.substring(0,1));
+
+            }else if (dealplriceShenzhen.length() <5){
+                shenzhendealPri.setText("0.0000");
+
+            }else {
+                shenzhendealPri.setText(dealplriceShenzhen.substring(0,dealplriceShenzhen.length()-8)+"."+dealplriceShenzhen.substring(dealplriceShenzhen.length()-8,dealplriceShenzhen.length()-6));
+
+            }
+        }else {
+
+        }
+
+
+
+
+    }
+
+    private void LinkToTourism() {
+        tourism.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), TourismWebview.class));
+            }
+        });
+    }
+
+    private void ExpressInfo() {
+        express.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ExpressQueryActivity.class));
+            }
+        });
     }
 
     private void BookTrainTicketAndQuery() {
@@ -209,19 +322,6 @@ public class City_Fragment extends Fragment implements ShowWeatherInfo,GetStrock
     }
 
     private void GetEconomicInfo() {
-        presenter_Strock.getStrockInfo(typeSHENZHEN);
-        new Thread(){
-            @Override
-            public void run() {
-                super.run();
-                try {
-                    Thread.currentThread().sleep(200);
-                    presenter_Strock.getStrockInfo(typeSHANGHAI);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }.start();
 
         shanghai.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -250,15 +350,7 @@ public class City_Fragment extends Fragment implements ShowWeatherInfo,GetStrock
 
     }
 
-    private void ShowWeatherInformations() {
-        presenter.showWeatherInfoPresenter();
-        Date date = new Date();
-        String CurrentTime = TimeFormatUtils.formatDate(date);
-        Log.i("CurrentTime", "CurrentTime: "+CurrentTime);
-        String currentTime = CurrentTime.substring(0,4)+CurrentTime.substring(5,7)+CurrentTime.substring(8);
-        Log.i("currenttime", "currenttime: "+currentTime);
-        presenter_byHour.getEveryHourWeatherPresenter(currentTime+"00",currentTime+"24");
-    }
+
 
     private void LinkToMovie() {
         funs.setOnClickListener(new View.OnClickListener() {
@@ -301,9 +393,9 @@ public class City_Fragment extends Fragment implements ShowWeatherInfo,GetStrock
         });
     }
     private void initData(){
-        list.add(new LoopBean(R.drawable.a));
-        list.add(new LoopBean(R.drawable.wodeguiji));
-        list.add(new LoopBean(R.drawable.xunjianluxian));
+        list.add(new LoopBean(R.drawable.loop1));
+        list.add(new LoopBean(R.drawable.loop2));
+        list.add(new LoopBean(R.drawable.loop3));
         initDots();
         news_viewpager.setAdapter(new MyPagerAdapter());
         updateIntroAndDot();
@@ -346,146 +438,6 @@ public class City_Fragment extends Fragment implements ShowWeatherInfo,GetStrock
         for (int i =0;i<dot_linearlayout.getChildCount();i++){
             dot_linearlayout.getChildAt(i).setEnabled(i== currentPage);
         }
-
-    }
-
-    @Override
-    public void showWeatherInfo(Result result) {
-            this.result = result;
-         weather_w = result.data.w;
-        Log.i("weather_w", "weather_w: "+weather_w);
-        Log.i("showeatherinfo", "showWeatherInfo: "+result.data.tmp);
-        now_Tempreture.setText(result.data.tmp+"℃");
-        int aqi  = result.data.aqi;
-        if (0<aqi && aqi<50){
-            airquality.setText("优 "+aqi);
-        }else if (aqi>= 50 && aqi<100){
-            airquality.setText("良 "+aqi);
-        }else if (aqi>= 100 && aqi< 150){
-            airquality.setText("轻度"+aqi);
-        }else if (aqi>=150 && aqi< 200){
-            airquality.setText("中度"+aqi);
-        }else if (aqi>= 200 && aqi< 300 ){
-            airquality.setText("重度"+aqi);
-        }else {
-            airquality.setText("严重"+aqi);
-        }
-
-    }
-
-    @Override
-    public void showErrorInfo(String error_Msg) {
-        Toast.makeText(getActivity(), "获取天气信息失败", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void getStrockIndexSuccess(StrockIndexResult result) {
-            Strocklist.add(result);
-        new Thread(){
-            @Override
-            public void run() {
-                super.run();
-                try {
-                    Thread.currentThread().sleep(500);
-
-                    if (Strocklist.size() == 0){
-                        Toast.makeText(getActivity(), "获取财富信息失败，请重试", Toast.LENGTH_SHORT).show();
-                    }else {
-                        Message msg1 = new Message();
-                        msg1.what = 2;
-                        Bundle bundle1 = new Bundle();
-                        bundle1.putString("shenzhenPri",Strocklist.get(0).nowpri.substring(0,Strocklist.get(0).nowpri.length()-1));
-                        msg1.setData(bundle1);
-                        MyHandler.sendMessage(msg1);
-
-                        Message msg2 = new Message();
-                        msg2.what = 3;
-                        Bundle bundle2= new Bundle();
-                        bundle2.putString("shenzhen",Strocklist.get(0).increPer+"%");
-                        msg2.setData(bundle2);
-                        MyHandler.sendMessage(msg2);
-
-                        Message msg3 = new Message();
-                        msg3.what = 4;
-                        Bundle bundle3 = new Bundle();
-                        bundle3.putString("shanghai",Strocklist.get(1).increPer+"%");
-                        msg3.setData(bundle3);
-                        MyHandler.sendMessage(msg3);
-                        Log.i("shanghai", "run: "+Strocklist.get(1).increPer+"%");
-//
-                        Message msg4 = new Message();
-                        msg4.what = 5;
-                        Bundle bundle4= new Bundle();
-                        bundle4.putString("shanghaiPri",Strocklist.get(1).nowpri.substring(0,Strocklist.get(1).nowpri.length()-2));
-                        msg4.setData(bundle4);
-                        MyHandler.sendMessage(msg4);
-                        Log.i("shanghaiPri", "run: "+Strocklist.get(1).nowpri.substring(0,Strocklist.get(1).nowpri.length()-2));
-
-                        Message msg5 = new Message();
-                        msg5.what = 6;
-                        Bundle bundle5= new Bundle();
-                        bundle5.putString("shanghaidealNum",Strocklist.get(1).dealNum.substring(0,5)+"."+Strocklist.get(1).dealNum.substring(5,7));
-                        msg5.setData(bundle5);
-                        MyHandler.sendMessage(msg5);
-                        Log.i("shanghaidealNum", "run: "+Strocklist.get(1).dealNum.substring(Strocklist.get(1).dealNum.length()-5,Strocklist.get(1).dealNum.length()));
-                        Log.i("shanghaidealNum", "run: "+Strocklist.get(1).dealNum.substring(0,4)+"."+Strocklist.get(1).dealNum.substring(4,6));
-
-                        Message msg6 = new Message();
-                        msg6.what = 7;
-                        Bundle bundle6= new Bundle();
-                        bundle6.putString("shanghaidealPri",Strocklist.get(1).dealPri.substring(0,4)+"."+Strocklist.get(1).dealNum.substring(4,6));
-                        msg6.setData(bundle6);
-                        MyHandler.sendMessage(msg6);
-                        Log.i("shanghaidealPri", "run: "+Strocklist.get(1).dealPri.substring(0,4)+"."+Strocklist.get(1).dealNum.substring(4,6));
-
-                        Message msg7 = new Message();
-                        msg7.what = 8;
-                        Bundle bundle7= new Bundle();
-                        bundle7.putString("shenzhendealNum",Strocklist.get(0).dealNum.substring(0,7)+"."+Strocklist.get(0).dealNum.substring(7,9));
-                        msg7.setData(bundle7);
-                        MyHandler.sendMessage(msg7);
-
-                        Message msg8 = new Message();
-                        msg8.what = 9;
-                        Bundle bundle8= new Bundle();
-                        bundle8.putString("shenzhendealPri",Strocklist.get(0).dealPri.substring(0,4)+"."+Strocklist.get(0).dealNum.substring(4,6));
-                        msg8.setData(bundle8);
-                        MyHandler.sendMessage(msg8);
-                    }
-
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }.start();
-
-
-    }
-
-    @Override
-    public void getStrockIndexFial(String Msg) {
-
-    }
-
-    @Override
-    public void getWeatherInfoSuccess(EveryHourResult result) {
-
-            List<Series> list_series = new ArrayList<>();
-            list_series = result.series;
-        int [] tem = new int[25] ;
-       for (int i=0;i<list_series.size();i++){
-           tem[i] = list_series.get(i).tmp;
-       }
-        Arrays.sort(tem);
-        Log.i("weatherOrder", "getMax: "+tem[24]+" ,getMin:" +tem[0]);
-        String weather_predict =  weather_w+tem[0]+"℃"+"/"+tem[24]+"℃";
-        Log.i("weather_predict", "weather_predict: "+weather_predict);
-        weather.setText(weather_predict);
-
-    }
-
-    @Override
-    public void getWeatherInfoFail(String Msg) {
 
     }
 
