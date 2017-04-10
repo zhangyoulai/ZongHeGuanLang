@@ -42,7 +42,7 @@ public class IGetVehicleViolationInfoModelImpl implements IGetVehicleViolationIn
                 Log.i("VehicleVioError_code", "error_code: "+vehicleViolation.error_code);
                 Log.i("VehicleViolationReason", "reason: "+vehicleViolation.reason);
                 if (vehicleViolation.error_code == 0){
-                    if (vehicleViolation.reason.equals("该车辆没有违章记录")){
+                    if (vehicleViolation.result == null){
                         GlobalContants.NoVehicleViolationBehavior = true;
                         asyncCallBack.OnSucess(vehicleViolation.reason);
                     }else {

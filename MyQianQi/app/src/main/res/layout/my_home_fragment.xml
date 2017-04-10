@@ -81,6 +81,7 @@
                        android:textSize="14sp"
                        android:text="余额"
                        android:layout_marginLeft="146dp"
+                       android:visibility="invisible"
                        />
                    <TextView
                        android:layout_width="wrap_content"
@@ -90,14 +91,16 @@
                        android:textSize="14sp"
                        android:textColor="#f78c00"
                        android:id="@+id/public_reserve_funds"
-                       android:layout_marginLeft="2dp"/>
+                       android:layout_marginLeft="2dp"
+                       android:visibility="invisible"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_gravity="center_vertical"
                        android:text="元"
                        android:textSize="14sp"
-                       android:layout_marginLeft="2dp"/>
+                       android:layout_marginLeft="2dp"
+                       android:visibility="invisible"/>
                    <ImageView
                        android:layout_width="18dp"
                        android:layout_height="18dp"
@@ -139,6 +142,7 @@
                        android:textSize="14sp"
                        android:text="最近应缴月份"
                        android:layout_marginLeft="121dp"
+                       android:visibility="invisible"
                        />
                    <TextView
                        android:layout_width="wrap_content"
@@ -148,14 +152,16 @@
                        android:textSize="14sp"
                        android:textColor="#f78c00"
                        android:id="@+id/social_security"
-                       android:layout_marginLeft="2dp"/>
+                       android:layout_marginLeft="2dp"
+                       android:visibility="invisible"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_gravity="center_vertical"
                        android:text="月"
                        android:textSize="14sp"
-                       android:layout_marginLeft="2dp"/>
+                       android:layout_marginLeft="2dp"
+                       android:visibility="invisible"/>
                    <ImageView
                        android:layout_width="18dp"
                        android:layout_height="18dp"
@@ -196,6 +202,7 @@
                        android:textSize="14sp"
                        android:text = "已缴纳"
                        android:layout_marginLeft="89dp"
+                       android:visibility="invisible"
                        />
                    <TextView
                        android:layout_width="wrap_content"
@@ -205,7 +212,8 @@
                        android:textSize="14sp"
                        android:textColor="#f78c00"
                        android:id="@+id/personal_tax"
-                       android:layout_marginLeft="3dp"/>
+                       android:layout_marginLeft="3dp"
+                       android:visibility="invisible"/>
 
                    <ImageView
                        android:layout_width="18dp"
@@ -349,9 +357,6 @@
                        android:textColor="#000000"
                        android:layout_marginLeft="10dp"
                        android:textSize="18sp"/>
-
-
-
                    <ImageView
                        android:layout_width="18dp"
                        android:layout_height="18dp"

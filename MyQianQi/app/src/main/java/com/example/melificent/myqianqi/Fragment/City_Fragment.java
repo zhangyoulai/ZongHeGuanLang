@@ -26,6 +26,7 @@ import com.example.melificent.myqianqi.Activity.HeadlineNewsWebPager;
 import com.example.melificent.myqianqi.Activity.TourismWebview;
 import com.example.melificent.myqianqi.Activity.TrainQueryActivity;
 import com.example.melificent.myqianqi.Activity.Webpage;
+import com.example.melificent.myqianqi.Activity.ZhengwufuwuActivity;
 import com.example.melificent.myqianqi.Bean.EveryHourWeather.EveryHourResult;
 import com.example.melificent.myqianqi.Bean.EveryHourWeather.Series;
 import com.example.melificent.myqianqi.Bean.Loop.LoopBean;
@@ -127,6 +128,9 @@ public class City_Fragment extends Fragment  {
     @InjectView(R.id.tourism)
     LinearLayout tourism;
 
+    //zhengfudating
+    @InjectView(R.id.zhengwudating)
+    ImageView zhengwudating;
 
     @Nullable
     @Override
@@ -154,7 +158,18 @@ public class City_Fragment extends Fragment  {
         ExpressInfo();
         //tourism about
         LinkToTourism();
+        //Link to zhengwudating
+        LinkToZhengwu();
         return view;
+    }
+
+    private void LinkToZhengwu() {
+        zhengwudating.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ZhengwufuwuActivity.class));
+            }
+        });
     }
 
     private void GetWeatherInformationFromWelcome() {
@@ -210,7 +225,7 @@ public class City_Fragment extends Fragment  {
     private void GetEconomicInfoFromWelcome() {
         Intent intent = getActivity().getIntent();
         Strocklist = (List<StrockIndexResult>) intent.getSerializableExtra("strockIndex");
-        if (Strocklist.size() >0){
+        if (Strocklist != null){
             shenzhenzhishu.setText(Strocklist.get(0).increPer+"%");
             shenzhenzhishuPri.setText(Strocklist.get(0).nowpri.substring(0,Strocklist.get(0).nowpri.length()-1));
             shangzhengzhishu.setText(Strocklist.get(1).increPer+"%");

@@ -31,7 +31,7 @@ public class HeadlineNewsWebPager extends AppCompatActivity {
         ButterKnife.inject(this);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("http://mp.weixin.qq.com/s?__biz=MjM5MjYxMTkyNA==&mid=2654310335&idx=1&sn=8ecfb3e1d99506675ef1ec1f304f86ac&chksm=bd6284848a150d9240726b6566aaf54b916775900136b930714e75b66b06dcdc45394b3d019d&mpshare=1&scene=23&srcid=0327tNhvtEC1zFKA4cXNQkl1#rd");
+        webView.loadUrl("http://mp.weixin.qq.com/s/aAWDVixhfUmiYyF5yMuhSg");
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

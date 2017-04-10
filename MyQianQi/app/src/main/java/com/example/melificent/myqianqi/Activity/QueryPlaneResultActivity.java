@@ -186,9 +186,12 @@ public class QueryPlaneResultActivity extends AppCompatActivity implements GetAi
 
     @Override
     public void getAirPlaneInfoByStationSuccess(List<AirPlaneInfoByStationResult> results) {
-        adapter = new Plane_byStation_Adapter(results);
-        recyclerView.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
+        if (results != null){
+            adapter = new Plane_byStation_Adapter(results);
+            recyclerView.setAdapter(adapter);
+            adapter.notifyDataSetChanged();
+        }
+
     }
 
     @Override

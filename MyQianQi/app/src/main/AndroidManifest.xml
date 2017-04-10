@@ -114,6 +114,12 @@
         <activity android:name=".Activity.SheBao"
             android:configChanges="orientation|keyboardHidden"
             android:exported="true" />
+        <activity android:name=".Activity.ZhengwufuwuActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.NoVehicleViolationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
     </application>
 
 </manifest>

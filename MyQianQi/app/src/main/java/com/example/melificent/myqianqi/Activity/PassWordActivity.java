@@ -53,7 +53,7 @@ public class PassWordActivity extends AppCompatActivity {
         regist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (virgin_password.getText().toString().trim().length() >6){
+                if (virgin_password.getText().toString().trim().length() >=6){
                     if (virgin_password.getText().toString().trim().equals(recorect_password.getText().toString().trim())){
                         db = helper.getReadableDatabase();
 

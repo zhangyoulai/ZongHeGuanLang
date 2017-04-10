@@ -93,6 +93,7 @@ public class Welcome extends AppCompatActivity implements GetStrockIndex,ShowWea
     public void getStrockIndexSuccess(StrockIndexResult result) {
         if (result != null){
             results.add(result);
+            Log.i("results.size", "getStrockIndexSuccess: "+results.size());
         }
 
     }
@@ -104,7 +105,10 @@ public class Welcome extends AppCompatActivity implements GetStrockIndex,ShowWea
 
     @Override
     public void showWeatherInfo(Result result) {
-        this.result = result;
+        if (result != null){
+            this.result = result;
+        }
+
     }
 
     @Override
@@ -114,7 +118,11 @@ public class Welcome extends AppCompatActivity implements GetStrockIndex,ShowWea
 
     @Override
     public void getWeatherInfoSuccess(EveryHourResult result) {
-        this.everyHourResult = result;
+        if (result != null){
+            this.everyHourResult = result;
+
+        }
+
     }
 
     @Override

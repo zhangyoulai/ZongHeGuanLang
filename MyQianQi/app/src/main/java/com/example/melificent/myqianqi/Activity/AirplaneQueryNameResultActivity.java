@@ -221,9 +221,12 @@ public class AirplaneQueryNameResultActivity extends AppCompatActivity implement
 
     @Override
     public void getAirPlaneInfoByNameSuccess(AirPlaneInfoResult result) {
-        adapter = new Plane_byName_Adapter(result.list, result.info.from_weather, result.info.to_weather, result.info.jingting_weater.weater);
-        recyclerView.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
+        if (result != null){
+            adapter = new Plane_byName_Adapter(result.list, result.info.from_weather, result.info.to_weather, result.info.jingting_weater.weater);
+            recyclerView.setAdapter(adapter);
+            adapter.notifyDataSetChanged();
+        }
+
 
     }
         @Override

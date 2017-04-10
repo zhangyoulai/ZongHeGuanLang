@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.melificent.myqianqi.LocalDataBase.PasswordDataBase;
 import com.example.melificent.myqianqi.LocalDataBase.PersonalInfomationDatabase;
@@ -92,6 +93,8 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this,FrameActivity.class);
                     intent.putExtra("name",name);
                     startActivity(intent);
+                }else {
+                    Toast.makeText(LoginActivity.this, "身份证号或密码错误！", Toast.LENGTH_SHORT).show();
                 }
             }
         });
