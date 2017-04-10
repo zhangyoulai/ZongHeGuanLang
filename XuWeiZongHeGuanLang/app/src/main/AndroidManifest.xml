@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.melificent.xuweizongheguanlang">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- baidu map end -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icona"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="FRi6c0kyCMz5Mpnpp5eG4loVN7mwo2F4" />
+
+        <activity android:name=".Activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <!-- 安全模块开启多进程:security -->
+        <activity
+            android:name=".Activity.OprationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:process=":security" />
+        <activity
+            android:name=".Activity.SelectPicPopWindow"
+            android:theme="@style/MyDialogStyleBottom" />
+        <activity
+            android:name=".Activity.GasActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:process=":gas"/>
+        <!-- 运维开启多进程-->
+        <activity
+            android:name=".Activity.NewOprationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:process=":opration"/>
+        <activity
+            android:name=".SearchHistoryView.SearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.ChartActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <!-- 营运开启多进程-->
+        <activity android:name=".Activity.BusinessActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:process=":business"/>
+        <activity android:name=".Activity.CompanyManage"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <!-- 应急开启多进程-->
+        <activity android:name=".Activity.EmergencyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:process=":emergency"/>
+        <activity android:name=".Activity.TempretureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.ComprehensiveMonitorActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.ConstructionActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.EnvironmentMonitorActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.EquipmentMonitorActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.MapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.VideoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.SecurityMonitorActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.InspectionActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.RepairAndMaintainManageActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.InspectionTaskActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
+        <activity android:name=".Activity.InspectionIssueFedBackActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            />
+
+        <service
+            android:name=".Chart.TCPServerService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+
+</manifest>
