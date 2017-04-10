@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:text="退出"
+        android:textColor="#0000ff"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/serial_number"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/offline_reson_text_size" />
+
+        <EditText
+            android:id="@+id/serial_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/offline_reson_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/operation"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/offline_reson_text_size" />
+
+        <Spinner
+            android:id="@+id/operation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:entries="@array/operation"
+            android:gravity="left"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/offline_reson_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/post_code"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/offline_reson_text_size" />
+
+        <EditText
+            android:id="@+id/post_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/offline_reson_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出错原因:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/offline_reson_text_size" />
+
+        <EditText
+            android:id="@+id/reason"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/off_line_reson"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/offline_reson_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="上下线点:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/offline_reson_text_size" />
+
+        <EditText
+            android:id="@+id/onoff_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="请输入上下线码"
+            android:text="P-XF001"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/offline_reson_text_size" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_onoff_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="执行上下线操作"
+        android:textColor="@color/colorBlack"
+        android:textSize="30sp" />
+
+</LinearLayout>

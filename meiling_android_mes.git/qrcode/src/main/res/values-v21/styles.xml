@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="title_size">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+    <style name="item_size">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/item_text_size</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/item_line1</item>
+    </style>
+
+    <style name="Theme.MJ.Default" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/blue_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.MJ.Default.EditText">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="Theme.MJ.Default.GrayEditText" parent="Theme.MJ.Default.EditText">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColor">#ff666666</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Theme.MJ.Default.Text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="Theme.MJ.Default.GrayText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#ff666666</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+    <style name="Theme.MJ.Default.SettingTextView" parent="Theme.MJ.Default.Text">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:textSize">30px</item>
+    </style>
+    <style name="Theme.MJ.Default.GrayButton">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:textSize">30px</item>
+
+    </style>
+
+</resources>

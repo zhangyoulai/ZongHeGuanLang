@@ -1,0 +1,68 @@
+<resources>
+
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/default_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="common_ink_text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <style name="Theme.MJ.Default" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.MJ.Default.GrayButton">
+
+    </style>
+
+    <style name="Theme.MJ.Default.EditText">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="Theme.MJ.Default.GrayEditText" parent="Theme.MJ.Default.EditText">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColor">#ff666666</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Theme.MJ.Default.Text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="Theme.MJ.Default.GrayText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#ff666666</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+    <style name="Theme.MJ.Default.SettingTextView" parent="Theme.MJ.Default.Text">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+
+    <!--注塑机默认文字-->
+    <style name="Show_default_font">
+        <item name="android:textSize">35.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffFFFFFF</item>
+    </style>
+    <style name="ContentContainer">
+        <item name="android:paddingLeft">27dp</item>
+        <item name="android:paddingRight">27dp</item>
+        <item name="android:paddingTop">27dp</item>
+        <item name="android:paddingBottom">27dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string-array name="product_origin_arrays">
+        <item>H:合肥</item>
+        <item>D:绵阳</item>
+        <item>J:江西</item>
+        <item>X:OEM产品</item>
+        <item>T:产品补码</item>
+    </string-array>
+
+    <string-array name="product_classes">
+        <item>甲班</item>
+        <item>乙班</item>
+        <item>丙班</item>
+    </string-array>
+
+    <string-array name="workstation_no">
+        <item>8工位</item>
+        <item>12工位</item>
+    </string-array>
+
+    <string-array name="product_category_arrays">
+        <item>C:内销冰箱/冷柜</item>
+        <item>D:出口冰箱/冷柜</item>
+        <item>G:内销洗衣机</item>
+        <item>3:空调</item>
+        <item>K:智能外设产品</item>
+        <item>H:出口洗衣机</item>
+    </string-array>
+    
+    <string-array name="product_line_arrays">
+        <item>5</item>
+    </string-array>
+
+</resources>

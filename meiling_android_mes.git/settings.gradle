@@ -1,0 +1,4 @@
+include ':comapi', ':app', ':logapi',
+        ':supertoasts', ':herilyalertdialog', ':base', ':mpchartapi', ':opcuaapi',
+        ':logshow', ':progresswheel', ':androidbootstrap'
+

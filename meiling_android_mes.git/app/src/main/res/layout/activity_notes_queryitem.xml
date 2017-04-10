@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:gravity="center">
+<LinearLayout
+    android:layout_width="360dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    android:background="@drawable/rectangle_white_stroke"
+    android:padding="20dp">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+        <TableRow android:layout_marginBottom="10dp">
+            <TextView android:text="R3码"
+                style="@style/Theme.MJ.Default.SettingTextView"
+                />
+            <app.android.mingjiang.com.androidbootstrap.BootstrapEditText
+                style="@style/Theme.MJ.Default.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bootstrapSize="md"
+                app:bootstrapBrand="info"
+                android:id="@+id/et_query"
+                android:hint="请输入冰箱R3码"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:layout_marginLeft="30dp"
+                />
+        </TableRow>
+
+    </TableLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_weight="1"
+            >
+
+            <app.android.mingjiang.com.androidbootstrap.BootstrapButton
+                android:id="@+id/btn_query_ok"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                app:bootstrapBrand="success"
+                app:bootstrapSize="lg"
+                app:buttonMode="regular"
+                app:showOutline="false"
+                app:roundedCorners="true"
+                />
+
+            <app.android.mingjiang.com.androidbootstrap.BootstrapButton
+                android:id="@+id/btn_query_cancel"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                app:bootstrapBrand="success"
+                app:bootstrapSize="lg"
+                app:buttonMode="regular"
+                app:showOutline="false"
+                app:roundedCorners="true"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

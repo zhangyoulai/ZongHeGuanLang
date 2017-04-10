@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adjustment_fragment.RequestFragment">
+
+    <TextView
+        android:id="@+id/material_id"
+        style="@style/textview_indent_style"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/material_name"
+        style="@style/textview_indent_style"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/safety"
+        style="@style/textview_indent_style"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/safety_stock"
+        style="@style/textview_indent_style"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/number"
+        style="@style/textview_indent_style"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/shortage"
+        style="@style/textview_indent_style"
+        android:layout_weight="1" />
+
+
+    <app.android.mingjiang.com.androidbootstrap.BootstrapButton
+        android:id="@+id/request_add"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:text="  叫料  "
+        android:textColor="@color/blue"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/status"
+        style="@style/textview_indent_style"
+        android:layout_weight="2"
+        android:text="没有操作"/>
+
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circle="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+.
+    <com.szugyi.circlemenu.view.CircleImageView
+        android:id="@+id/oper_instruction"
+        circle:name="@string/oper_instruction"
+        style="@style/menu_item_style"
+        android:src="@drawable/oper_instruction" />
+
+    <com.szugyi.circlemenu.view.CircleImageView
+        android:id="@+id/print_qr_code"
+        circle:name="@string/print_qr_code"
+        style="@style/menu_item_style"
+        android:src="@drawable/print_qr_code" />
+
+    <com.szugyi.circlemenu.view.CircleImageView
+        android:id="@+id/quality_inspection"
+        circle:name="@string/quality_inspection"
+        style="@style/menu_item_style"
+        android:src="@drawable/quality_inspection" />
+
+    <!--<com.szugyi.circlemenu.view.CircleImageView-->
+        <!--android:id="@+id/equipment_monitoring"-->
+        <!--circle:name="@string/equipment_monitor"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--style="@style/menu_item_style"-->
+        <!--android:src="@drawable/equipment_monitor" />-->
+
+    <com.szugyi.circlemenu.view.CircleImageView
+        android:id="@+id/product_monitor"
+        circle:name="@string/product_monitor"
+        style="@style/menu_item_style"
+        android:src="@drawable/product_monitor" />
+
+    <com.szugyi.circlemenu.view.CircleImageView
+        android:id="@+id/equipment_inspection"
+        circle:name="@string/line_storage"
+        style="@style/menu_item_style"
+        android:src="@drawable/line_storage" />
+
+    <!--<com.szugyi.circlemenu.view.CircleImageView-->
+        <!--android:id="@+id/generate_code"-->
+        <!--circle:name="@string/generate_code"-->
+        <!--style="@style/menu_item_style"-->
+        <!--android:src="@drawable/generate_code" />-->
+
+    <com.szugyi.circlemenu.view.CircleImageView
+        android:id="@+id/compare_code"
+        circle:name="@string/compare_code"
+        style="@style/menu_item_style"
+        android:src="@drawable/compare_code_log" />
+
+    <com.szugyi.circlemenu.view.CircleImageView
+        android:id="@+id/materials_management"
+        circle:name="@string/materials_management"
+        style="@style/menu_item_style"
+        android:src="@drawable/materials_management" />
+
+    <com.szugyi.circlemenu.view.CircleImageView
+        android:id="@+id/onoff_line"
+        circle:name="@string/onoff_line"
+        style="@style/menu_item_style"
+        android:src="@drawable/onoff_line" />
+
+    <com.szugyi.circlemenu.view.CircleImageView
+        android:id="@+id/print_delivery_notes"
+        circle:name="@string/print_delivery_notes"
+        style="@style/menu_item_style"
+        android:src="@drawable/delivery_note_logo" />
+</merge>

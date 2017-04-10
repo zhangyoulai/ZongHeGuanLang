@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="型号："
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/fragment5_badness_producttype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="型号"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="不良比例"
+                android:textColor="@color/footer_bg"
+                android:textSize="23sp" />
+        </LinearLayout>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/fragment5_badness_chart"
+            android:layout_width="300dp"
+            android:layout_height="300dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="型号："
+                android:textSize="30sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="型号"
+                android:textSize="30sp"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:gravity="right">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="总数量："
+                    android:textColor="@color/footer_bg"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/fragment5_badness_alltotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="件"
+                    android:textColor="@color/footer_bg"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="直通率·："
+                    android:textColor="@color/footer_bg"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/fragment5_badness_fpy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30%"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textview_badness_style"
+                android:layout_weight="3"
+                android:text="不良原因" />
+
+            <TextView
+                style="@style/textview_badness_style"
+                android:text="件数" />
+
+            <TextView
+                style="@style/textview_badness_style"
+                android:text="占总数比" />
+
+            <TextView
+                style="@style/textview_badness_style"
+                android:text="占不良比" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/run"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/fragment5_badness_badname1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:lines="1"
+                    android:textColor="@color/title_bg2"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fragment5_badness_badvalue1"
+                style="@style/textview_badness_style2" />
+
+            <TextView
+                android:id="@+id/fragment5_badness_totalscale1"
+                style="@style/textview_badness_style2" />
+
+            <TextView
+                android:id="@+id/fragment5_badness_badscale1"
+                style="@style/textview_badness_style2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/blue_chart"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/fragment5_badness_badname2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:gravity="center|left"
+                    android:lines="1"
+                    android:textColor="@color/title_bg2"
+                    android:textSize="16sp" />/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fragment5_badness_badvalue2"
+                style="@style/textview_badness_style2" />
+
+
+            <TextView
+                android:id="@+id/fragment5_badness_totalscale2"
+                style="@style/textview_badness_style2" />
+
+            <TextView
+                android:id="@+id/fragment5_badness_badscale2"
+                style="@style/textview_badness_style2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/rb"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/fragment5_badness_badname3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:gravity="center|left"
+                    android:lines="1"
+                    android:textColor="@color/title_bg2"
+                    android:textSize="16sp" />/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fragment5_badness_badvalue3"
+                style="@style/textview_badness_style2" />
+
+            <TextView
+                android:id="@+id/fragment5_badness_totalscale3"
+                style="@style/textview_badness_style2" />
+
+            <TextView
+                android:id="@+id/fragment5_badness_badscale3"
+                style="@style/textview_badness_style2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/not_run"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/fragment5_badness_badname4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:gravity="center|left"
+                    android:lines="1"
+                    android:textColor="@color/title_bg2"
+                    android:textSize="16sp" /> />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fragment5_badness_badvalue4"
+                style="@style/textview_badness_style2" />
+
+            <TextView
+                android:id="@+id/fragment5_badness_totalscale4"
+                style="@style/textview_badness_style2" />
+
+            <TextView
+                android:id="@+id/fragment5_badness_badscale4"
+                style="@style/textview_badness_style2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_5"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/footer_text_color"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/fragment5_badness_badname5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:gravity="center|left"
+                    android:lines="1"
+                    android:textColor="@color/title_bg2"
+                    android:textSize="16sp" /> />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fragment5_badness_badvalue5"
+                style="@style/textview_badness_style2" />
+
+            <TextView
+                android:id="@+id/fragment5_badness_totalscale5"
+                style="@style/textview_badness_style2" />
+
+            <TextView
+                android:id="@+id/fragment5_badness_badscale5"
+                style="@style/textview_badness_style2" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

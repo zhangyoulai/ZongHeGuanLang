@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#211B25"
+    android:orientation="vertical">
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:background="#165AB8"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="50dp"-->
+            <!--android:src="@drawable/meiling"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="30sp"-->
+            <!--android:text="M线线体状态"-->
+            <!--android:textColor="#EBFFFF"-->
+            <!--android:textSize="50sp"/>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="100dp"-->
+            <!--android:gravity="right|center">-->
+
+            <!--<TextClock-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:textSize="50sp"/>-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="40dp"-->
+                <!--android:src="@drawable/mjzn"/>-->
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backgroud">
+
+        <LinearLayout
+            android:layout_marginTop="120sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_rotate12"
+                android:layout_marginLeft="260dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rotate_normal"/>
+
+            <ImageView
+                android:id="@+id/iv_box12"
+                android:layout_marginLeft="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/box_stop"/>
+
+            <ImageView
+                android:id="@+id/iv_base12"
+                android:layout_marginLeft="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/base_normal"/>
+
+            <ImageView
+                android:id="@+id/iv_aline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="400sp"
+                android:src="@drawable/bline_normal"/>
+
+            <ImageView
+                android:id="@+id/iv_offlinea"
+                android:layout_marginLeft="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/offline_normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="220sp">
+
+            <TextView
+                android:layout_marginLeft="210sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#ffffff"
+                android:text="12-自动翻转"/>
+
+            <TextView
+                android:layout_marginLeft="100sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#ffffff"
+                android:text="12-箱发"/>
+
+            <TextView
+                android:layout_marginLeft="90sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#ffffff"
+                android:text="12-自动装底座"/>
+
+            <TextView
+                android:layout_marginLeft="315sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#ffffff"
+                android:text="总装外线"/>
+
+            <TextView
+                android:layout_marginLeft="30sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#ffffff"
+                android:text="总装外线提升机"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="195sp">
+
+            <ImageView
+                android:id="@+id/iv_vacuum"
+                android:layout_marginLeft="1000sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vacuum_normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="290sp">
+
+            <TextView
+                android:layout_marginLeft="980sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#ffffff"
+                android:text="抽真空线"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="270sp">
+
+            <ImageView
+                android:id="@+id/iv_rotate8"
+                android:layout_marginLeft="260dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rotate_stop"/>
+
+            <ImageView
+                android:id="@+id/iv_box8"
+                android:layout_marginLeft="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/box_normal"/>
+
+            <ImageView
+                android:id="@+id/iv_base8"
+                android:layout_marginLeft="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/base_normal"/>
+
+            <ImageView
+                android:id="@+id/iv_bline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="400sp"
+                android:src="@drawable/bline_normal"/>
+
+            <ImageView
+                android:id="@+id/iv_offlineb"
+                android:layout_marginLeft="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/offline_normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="370dp">
+
+            <TextView
+                android:layout_marginLeft="220sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#ffffff"
+                android:text="8-自动翻转"/>
+
+            <TextView
+                android:layout_marginLeft="120sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#ffffff"
+                android:text="8-箱发"/>
+
+            <TextView
+                android:layout_marginLeft="100sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#ffffff"
+                android:text="8-自动装底座"/>
+
+            <TextView
+                android:layout_marginLeft="330sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#ffffff"
+                android:text="总装内线"/>
+
+            <TextView
+                android:layout_marginLeft="30sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#ffffff"
+                android:text="总装内线提升机"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="405sp">
+
+            <ImageView
+                android:id="@+id/iv_din"
+                android:layout_marginLeft="1000sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/din_normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500sp">
+
+            <TextView
+                android:layout_marginLeft="1000sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#ffffff"
+                android:text="测试进"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="550sp">
+
+            <ImageView
+                android:id="@+id/iv_dout"
+                android:layout_marginLeft="1000dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dout_normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="650sp">
+
+            <TextView
+                android:layout_marginLeft="1000dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="35sp"
+                android:text="测试出"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="700sp">
+
+            <ImageView
+                android:id="@+id/iv_washline"
+                android:layout_marginLeft="1000dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/washline_normal"/>
+
+            <ImageView
+                android:id="@+id/iv_casebox"
+                android:layout_marginLeft="300sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/casebox_normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="800sp">
+
+            <TextView
+                android:layout_marginLeft="1000dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="35sp"
+                android:text="清洗线"/>
+
+            <TextView
+                android:layout_marginLeft="315dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="35sp"
+                android:text="套箱"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

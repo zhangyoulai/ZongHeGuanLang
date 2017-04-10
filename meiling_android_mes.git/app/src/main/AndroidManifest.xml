@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mingjiang.android.app">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name=".AppContext"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher_meiling"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.MainMenuActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".broadcast.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.ComService" />
+
+        <activity android:name=".ui.QrcodePrintActivity" />
+        <activity android:name=".ui.QrcodeMainActivity" />
+
+        <activity android:name=".ui.SpectacularsActivity"></activity>
+        <activity android:name=".ui.FoamingMachineActivity" />
+        <activity android:name=".ui.PerfusionMachineActivity" />
+        <activity android:name=".ui.WeldmentActivity" />
+
+        <activity android:name=".ui.MatrialsMainActivity"/>
+        <activity android:name=".ui.MaterialLoginActivity"/>
+        <activity android:name=".ui.MatrtialsShowActivity"/>
+
+        <activity android:name=".ui.LineStorageMainActivity"/>
+        <activity android:name=".ui.LineStorageLoginActivity"/>
+
+        <activity android:name=".ui.PostScanActivity"/>
+        <activity android:name=".ui.UserScanActivity"/>
+        <activity android:name=".ui.OnOffLineActivity"/>
+        <activity android:name=".ui.InstructionPdfActivity"/>
+
+        <activity android:name=".ui.DeliveryNotesActivity"/>
+
+        <activity android:name=".ui.CompareActivity"/>
+
+        <activity android:name=".ui.InspectionMainActivity"/>
+        <activity android:name=".ui.CheckActivity"/>
+
+    </application>
+</manifest>

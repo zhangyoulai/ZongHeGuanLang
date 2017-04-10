@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <!--勾选框-->
+    <CheckBox
+        android:id="@+id/cb_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:clickable="false"
+        />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/Theme.MJ.Default.SettingTextView"
+        android:textSize="30px"
+        android:gravity="center"
+        android:text="日期"/>
+    <!--种类  用产品型号代替 android:focusable="false"-->
+    <TextView
+        android:id="@+id/tv_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/Theme.MJ.Default.SettingTextView"
+        android:textSize="30px"
+        android:gravity="center"
+        android:text="型号"/>
+    <TextView
+        android:id="@+id/tv_r3code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/Theme.MJ.Default.SettingTextView"
+        android:textSize="30px"
+        android:gravity="center" />
+    <!--订单号-->
+    <TextView
+        android:id="@+id/tv_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/Theme.MJ.Default.SettingTextView"
+        android:textSize="30px"
+        android:gravity="center"
+        android:text="订单号"/>
+    <!--需要打印的数量-->
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/Theme.MJ.Default.SettingTextView"
+        android:textSize="30px"
+        android:gravity="center"
+        android:hint="需要打印的数量"/>
+    <!--已经打印的数量-->
+    <TextView
+        android:id="@+id/tv_completed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/Theme.MJ.Default.SettingTextView"
+        android:textSize="30px"
+        android:gravity="center"
+        android:text="已经打印的数量"/>
+
+    <Button
+        android:id="@+id/btn_print"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/Theme.MJ.Default.GrayButton"
+        android:textSize="30px"
+        android:gravity="center"
+        android:text="打印二维码" />
+    <!--定额-->
+    <!--<EditText-->
+        <!--android:id="@+id/et_norm"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--style="@style/Theme.MJ.Default.SettingTextView"-->
+        <!--android:gravity="center"-->
+        <!--android:hint="定额"/>-->
+
+</LinearLayout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/weld_imageveiw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/meiling_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0e4bb5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dip"
+                android:layout_marginTop="10dp"
+                android:gravity="left|center_vertical"
+                android:text="@string/perfusion_machine"
+                android:textColor="#ffffff"
+                android:textSize="30dp" />
+
+            <TextClock
+                android:id="@+id/weldClock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right|center_vertical"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 管理数据-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dip"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <!-- 设备名称-->
+                <TextView
+                    style="@style/weld_static_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/device_name" />
+
+                <TextView
+                    android:id="@+id/device_name"
+                    style="@style/weld_static_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/perfusion_machine" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <!-- 岗位-->
+                <TextView
+                    style="@style/weld_static_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/post" />
+
+                <TextView
+                    android:id="@+id/post"
+                    style="@style/weld_static_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="灌氟" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <!-- 前置工序-->
+                <TextView
+                    style="@style/weld_static_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pre_step" />
+
+                <TextView
+                    android:id="@+id/pre_step"
+                    style="@style/weld_static_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抽真空" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <!-- 后置工序-->
+                <TextView
+                    style="@style/weld_static_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/af_step" />
+
+                <TextView
+                    android:id="@+id/af_step"
+                    style="@style/weld_static_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="灌氟封口焊接" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <!-- 设置状态-->
+                <TextView
+                    style="@style/weld_static_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/equip_status" />
+
+                <TextView
+                    android:id="@+id/equip_status"
+                    style="@style/weld_static_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="运行中"
+                    android:textColor="@color/green" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 工艺数据 -->
+    <LinearLayout
+        style="@style/weld_dynamic_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/textview_perfusion_machine"
+                    android:text="条码："/>
+                <TextView
+                    style="@style/textview_perfusion_machine"
+                    android:text="时间："/>
+                <TextView
+                    style="@style/textview_perfusion_machine"
+                    android:text="灌注枪："/>
+                <TextView
+                    style="@style/textview_perfusion_machine"
+                    android:text="程序序号："/>
+                <TextView
+                    style="@style/textview_perfusion_machine"
+                    android:text="真空度："/>
+                <TextView
+                    style="@style/textview_perfusion_machine"
+                    android:text="实际真空度："/>
+                <TextView
+                    style="@style/textview_perfusion_machine"
+                    android:text="设定克数："/>
+                <TextView
+                    style="@style/textview_perfusion_machine"
+                    android:text="实际克数："/>
+                <TextView
+                    style="@style/textview_perfusion_machine"
+                    android:text="灌注结果："/>
+                <TextView
+                    style="@style/textview_perfusion_machine"
+                    android:text="制冷剂代码："/>
+                <TextView
+                    style="@style/textview_perfusion_machine"
+                    android:text="制冷剂类型："/>
+                <TextView
+                    style="@style/textview_perfusion_machine"
+                    android:text="冷媒温度："/>
+                <TextView
+                    style="@style/textview_perfusion_machine"
+                    android:text="冷媒压力："/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_bar_code"
+                    style="@style/textview_perfusion_machine_content"
+                    android:text="HC5901375510000607030278"/>
+                <TextView
+                    android:id="@+id/tv_report_time"
+                    style="@style/textview_perfusion_machine_content"
+                    android:text="2016-07-05 10:48:01"/>
+                <TextView
+                    android:id="@+id/tv_gun_number"
+                    style="@style/textview_perfusion_machine_content"
+                    android:text="1号枪"/>
+                <TextView
+                    android:id="@+id/tv_program_number"
+                    style="@style/textview_perfusion_machine_content"
+                    android:text="26"/>
+                <TextView
+                    android:id="@+id/tv_vacuum_degree"
+                    style="@style/textview_perfusion_machine_content"
+                    android:text="1"/>
+                <TextView
+                    android:id="@+id/tv_actual_vacuum_degree"
+                    style="@style/textview_perfusion_machine_content"
+                    android:text="1"/>
+                <TextView
+                    android:id="@+id/tv_set_grams"
+                    style="@style/textview_perfusion_machine_content"
+                    android:text="74.0g"/>
+                <TextView
+                    android:id="@+id/tv_actual_grams"
+                    style="@style/textview_perfusion_machine_content"
+                    android:text="0.0g"/>
+                <TextView
+                    android:id="@+id/tv_report_result"
+                    style="@style/textview_perfusion_machine_content"
+                    android:text="不合格"/>
+                <TextView
+                    android:id="@+id/tv_refrigerant_code"
+                    style="@style/textview_perfusion_machine_content"
+                    android:text="1"/>
+                <TextView
+                    android:id="@+id/tv_refrigerant_type"
+                    style="@style/textview_perfusion_machine_content"
+                    android:text="R600a"/>
+                <TextView
+                    android:id="@+id/tv_refrigerant_temperature"
+                    style="@style/textview_perfusion_machine_content"
+                    android:text="23℃"/>
+                <TextView
+                    android:id="@+id/tv_refrigerant_pressure"
+                    style="@style/textview_perfusion_machine_content"
+                    android:text="2127KPa"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

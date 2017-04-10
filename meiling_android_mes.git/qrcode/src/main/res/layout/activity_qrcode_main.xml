@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_bg"
+    android:orientation="vertical">
+
+    <!--标题栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/meiling_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dip"
+                android:layout_marginTop="10dp"
+                android:gravity="left|center_vertical"
+                android:text="打印二维码"
+                android:textColor="#000000"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/weldClock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right|center_vertical"
+                android:text="明匠智能技术支持"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--ListView-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.618"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/Theme.MJ.Default.SettingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="日期"
+                android:textSize="30px" />
+
+            <TextView
+                style="@style/Theme.MJ.Default.SettingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="冰箱型号"
+                android:textSize="30px" />
+
+            <TextView
+                style="@style/Theme.MJ.Default.SettingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="产品编码"
+                android:textSize="30px" />
+
+            <TextView
+                style="@style/Theme.MJ.Default.SettingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="订单号"
+                android:textSize="30px" />
+
+            <TextView
+                style="@style/Theme.MJ.Default.SettingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="日订单数量"
+                android:textSize="30px" />
+
+            <TextView
+                style="@style/Theme.MJ.Default.SettingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="已打印数量"
+                android:textSize="30px" />
+
+            <TextView
+                style="@style/Theme.MJ.Default.SettingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="打印"
+                android:textSize="30px" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_item"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_weight="1"></ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow android:layout_marginBottom="10dp">
+
+                    <TextView
+                        style="@style/Theme.MJ.Default.SettingTextView"
+                        android:text="日期" />
+
+                    <DatePicker
+                        android:id="@+id/dp_plan_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></DatePicker>
+
+                    <TextView
+                        style="@style/Theme.MJ.Default.Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="30px"
+                        android:text="剩余纸张:" />
+
+                    <TextView
+                        android:id="@+id/tv_paper_num"
+                        style="@style/Theme.MJ.Default.Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="" />
+                </TableRow>
+            </TableLayout>
+
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow android:layout_marginBottom="10dp">
+
+                    <Button
+                        android:id="@+id/btn_import_plan"
+                        android:textSize="25px"
+                        style="@style/Theme.MJ.Default.GrayButton"
+                        android:text="导入日计划" />
+
+                    <Button
+                        android:id="@+id/btn_add_print"
+                        style="@style/Theme.MJ.Default.GrayButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25px"
+                        android:gravity="center"
+                        android:text="补打印" />
+
+                    <Button
+                        android:id="@+id/btn_print_broken_code"
+                        style="@style/Theme.MJ.Default.GrayButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25px"
+                        android:gravity="center"
+                        android:text="报废流水号" />
+
+                    <Button
+                        android:id="@+id/btn_new_paper"
+                        style="@style/Theme.MJ.Default.GrayButton"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25px"
+                        android:text="更换纸张" />
+
+                    <Button
+                        android:id="@+id/btn_two_paper"
+                        style="@style/Theme.MJ.Default.GrayButton"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25px"
+                        android:text="打印双码" />
+
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.618"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="型号"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="二维码"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="状态"/>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:transcriptMode="alwaysScroll" /><!--总是滚动到底部-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

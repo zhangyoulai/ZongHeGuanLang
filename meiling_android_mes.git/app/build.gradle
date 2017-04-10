@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias '美菱app签名'
+            keyPassword '123456'
+            storeFile file('C:/Users/wdongjia/AndroidStudioProjects/meiling_android_mes/meiling_android.jks')
+            storePassword '123456'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+    defaultConfig {
+        applicationId "com.mingjiang.android.app"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.49"
+        multiDexEnabled true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.1.1'
+    compile 'com.android.support:recyclerview-v7:24.1.1'
+
+    compile 'com.android.support:multidex:1.0.0'
+
+    compile 'com.github.szugyi:Android-CircleMenu:1.1.2'//环形菜单
+
+//    compile project(':appupdata')
+//    compile project(':inspection')
+//    compile project(':qrcode')
+//    compile project(':matrtials')
+//    compile project(':equipmonitor')
+//    compile project(':spectaculars')
+//    compile project(':scan')
+//    compile project(':linestorage')
+//    compile project(':circlemenulib')
+//    compile project(':deliverynotes')
+//    compile project(':compare')
+    compile project(':logapi')
+    compile project(':base')
+    compile project(':comapi')
+    compile 'com.github.barteksc:android-pdf-viewer:2.1.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.3.0'
+    compile 'com.squareup.okhttp:okhttp:2.3.0-RC1'
+
+}

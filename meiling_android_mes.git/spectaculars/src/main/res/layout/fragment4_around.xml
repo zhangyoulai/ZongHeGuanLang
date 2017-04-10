@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#cccccc"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/fragment4_textveiw1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="无筛选条件(默认显示所有物料)"
+            android:textColor="#ff0000"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment4_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone">
+        <!---->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/materialid"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/item_text" />
+
+            <app.android.mingjiang.com.androidbootstrap.BootstrapEditText
+                android:id="@+id/material_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/item_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/materialname"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/item_text" />
+
+            <app.android.mingjiang.com.androidbootstrap.BootstrapEditText
+                android:id="@+id/material_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/item_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/area_id"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/item_text" />
+
+            <app.android.mingjiang.com.androidbootstrap.BootstrapEditText
+                android:id="@+id/area_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/item_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/page_size"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/item_text" />
+
+            <Spinner
+                android:id="@+id/page_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/page_size"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/item_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/page_number"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/item_text" />
+
+            <app.android.mingjiang.com.androidbootstrap.BootstrapEditText
+                android:id="@+id/page_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/item_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text=" " />
+
+            <app.android.mingjiang.com.androidbootstrap.BootstrapButton
+                android:id="@+id/material_query"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#000099"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/query"
+                android:textColor="@color/blue"
+                android:textSize="35dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top">
+
+        <TextView
+            style="@style/textview_query_style1"
+            android:text="@string/materialid" />
+
+        <TextView
+            style="@style/textview_query_style1"
+            android:text="@string/materialname" />
+
+        <TextView
+            style="@style/textview_query_style1"
+            android:text="@string/area_id" />
+
+        <TextView
+            style="@style/textview_query_style1"
+            android:text="@string/material_safety" />
+
+        <TextView
+            style="@style/textview_query_style1"
+            android:text="@string/safety_stock" />
+
+        <TextView
+            style="@style/textview_query_style1"
+            android:text="@string/lib_number" />
+
+        <TextView
+            style="@style/textview_query_style1"
+            android:visibility="gone"
+            android:text="@string/shortage" />
+
+        <TextView
+            style="@style/textview_query_style1"
+            android:text="@string/expends" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/around_material_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:divider="#00000000"/>
+</LinearLayout>
+

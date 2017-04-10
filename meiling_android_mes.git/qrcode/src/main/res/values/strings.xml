@@ -1,0 +1,99 @@
+<resources>
+
+    <string name="finishedCode">原二维码</string>
+    <string name="QRcode">已打印二维码</string>
+    <string name="status">状态</string>
+    <string name="printed">已打印</string>
+    <string name="not_print">未打印</string>
+    <string name="printing">打印中</string>
+    <string name="time">时间</string>
+    <string name="wait">请等待本次扫描处理完毕在进行下一次扫描</string>
+
+    <string name="warning_cannot_print">这条日计划已经完成，不能继续打印</string>
+    <string name="app_name">12工位预装打码</string>
+    <string name="header_fragment">明匠智能</string>
+    <string name="setting_activity">设置</string>
+    <string name="com_start_success">打开串口成功</string>
+    <string name="com_start_fail_security">打开串口失败:没有串口读/写权限!</string>
+    <string name="com_start_fail_io">打开串口失败:未知错误!</string>
+    <string name="com_start_fail_param">打开串口失败:参数错误!</string>
+    <string name="workstation_no">工位编号:</string>
+    <string name="hint_input_workstation_no">请选择工位编号</string>
+    <string name="product_origin">产地/特定</string>
+    <string name="product_category">产品类别</string>
+    <string name="product_line">生产线体</string>
+    <string name="material_code">成品物料代码</string>
+    <string name="custom_code">自定义代码</string>
+    <string name="date_of_manufacture">生产日期</string>
+    <string name="product_sequence_number">产品顺序号</string>
+    <string name="save">保存</string>
+    <string name="turn_back">返回</string>
+    <string name="alarm">提示</string>
+    <string name="print">打印</string>
+    <string name="clear">清除</string>
+
+    <string name="hint_input_custom_code">请输入自定义代码</string>
+    <string name="hint_input_order_no">请输入关联订单号</string>
+    <string name="hint_input_print_number">请输入需要打印的数量</string>
+    <string name="queue_empty">没有需要打印的二维码</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+</resources>

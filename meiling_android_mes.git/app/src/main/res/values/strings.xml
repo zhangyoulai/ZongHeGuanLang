@@ -1,0 +1,215 @@
+<resources>
+
+    <string name="app_name">MES智能系统</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- 欢迎界面-->
+    <string name = "welcome_system">欢迎使用明匠智能系统</string>
+    <string name="scan_code_system">请扫描岗位二维码...</string>
+    <string name="scan_user_system">请扫描用户工牌...</string>
+    <string name="tip_title">数据加载</string>
+    <string name="load_data_tip">正在加载服务端数据，请稍候...</string>
+
+    <!-- 下线原因提示-->
+    <string name="off_line_reson">执行线操作时，请输入下线原因！</string>
+
+    <string name="on_line_btn">上线操作</string>
+    <string name="off_line_btn">下线操作</string>
+
+    <string name="on_line">上线</string>
+    <string name="off_line">下线</string>
+    <!--<string name="submit">执行上下线操作</string>-->
+    <string name="serial_number">生产流水号:</string>
+    <string name="order_id">订单号:</string>
+    <string name="operation">岗位类型:</string>
+    <string name="person">操作员:</string>
+    <string name="reason">下线原因:</string>
+
+    <string-array name="operation">
+        <item>上线</item>
+        <item>下线 </item>
+    </string-array>
+
+    <!-- 岗位指导书-->
+    <string name="post_oper_instruction">岗位作业指导书</string>
+    <string name="post_code">岗位编码:</string>
+    <string name="post_name">岗位名称:</string>
+    <string name="director_name">指导书名称:</string>
+    <string name="apply_factory">适用工厂:</string>
+    <string name="product_line">生产线:</string>
+    <string name="precaution">上岗安全须知及班后注意事项</string>
+    <string name="protect_requirement">防护要求</string>
+    <string name="industry_highlight">工艺要点</string>
+    <string name="use_tool">工具/工装</string>
+
+    <string name="oper_code">序号</string>
+    <string name="oper_description">步骤描述</string>
+    <string name="oper_photo">步骤图示</string>
+    <string name="handle_photo">操作步骤及作简图</string>
+    <string name="handle_precautions">操作注意事项</string>
+    <string name="specification">物料名称/规格</string>
+    <string name="parts_list">部件清单</string>
+    <!-- 功能点名字-->
+    <string name="oper_instruction">岗位作业指导书</string>
+    <string name="print_qr_code">预装打码</string>
+    <string name="quality_inspection">质量检测</string>
+    <string name="equipment_monitor">设备监控</string>
+    <string name="product_monitor">生产监控</string>
+    <string name="line_storage">线边仓库</string>
+    <string name="materials_management">物料管理</string>
+    <string name="onoff_line">上下线</string>
+    <string name="print_delivery_notes">打印送货单</string>
+    <string name="compare_code">二维码关联</string>
+
+
+    <string name="finishedCode">原二维码</string>
+    <string name="QRcode">已打印二维码</string>
+    <string name="status">状态</string>
+    <string name="printed">已打印</string>
+    <string name="not_print">未打印</string>
+    <string name="printing">打印中</string>
+    <string name="time">时间</string>
+    <string name="wait">请等待本次扫描处理完毕在进行下一次扫描</string>
+
+    <string name="warning_cannot_print">这条日计划已经完成，不能继续打印</string>
+    <string name="header_fragment">明匠智能</string>
+    <string name="setting_activity">设置</string>
+    <string name="com_start_success">打开串口成功</string>
+    <string name="com_start_fail_security">打开串口失败:没有串口读/写权限!</string>
+    <string name="com_start_fail_io">打开串口失败:未知错误!</string>
+    <string name="com_start_fail_param">打开串口失败:参数错误!</string>
+    <string name="workstation_no">工位编号:</string>
+    <string name="hint_input_workstation_no">请选择工位编号</string>
+    <string name="product_origin">产地/特定</string>
+    <string name="product_category">产品类别</string>
+    <string name="material_code">成品物料代码</string>
+    <string name="custom_code">自定义代码</string>
+    <string name="date_of_manufacture">生产日期</string>
+    <string name="product_sequence_number">产品顺序号</string>
+    <string name="save">保存</string>
+    <string name="turn_back">返回</string>
+    <string name="alarm">提示</string>
+    <string name="print">打印</string>
+    <string name="clear">清除</string>
+
+    <string name="hint_input_custom_code">请输入自定义代码</string>
+    <string name="hint_input_order_no">请输入关联订单号</string>
+    <string name="hint_input_print_number">请输入需要打印的数量</string>
+    <string name="queue_empty">没有需要打印的二维码</string>
+
+    <!-- 中间库与线边库 -->
+    <string name="materialid">物料编码</string>
+    <string name="materialname">物料名称</string>
+    <string name="seat_id">库位编号</string>
+    <string name="safety_stock">安全库存</string>
+    <string name="material_safety">是否安全</string>
+    <string name="lib_number">库存数</string>
+    <string name="shortage">库存缺量</string>
+    <string name="reservoir_area">库区编号</string>
+    <string name="area_id">下料点编号</string>
+    <string name="expends">单位消耗</string>
+    <string name="page_size">页面大小</string>
+    <string name="page_number">当前页码</string>
+    <string name="query">物料查询</string>
+
+    <string-array name="page_size">
+        <item>10</item>
+        <item>20</item>
+        <item>50</item>
+        <item>100</item>
+    </string-array>
+
+    <string name="material_id">物料代码：</string>
+    <string name="material_name">物料名称：</string>
+    <string name="material_count">物料数量：</string>
+    <string name="safe_stock">安全库存：</string>
+    <string name="proportion">消耗比例：</string>
+    <string name="get_more">点击取料</string>
+    <string name="use_merails">点击用料</string>
+    <string name="get_count">取料数量：</string>
+    <string name="enough">物料充足</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="add"> ＋   </string>
+    <string name="sub">   － </string>
+    <string name="start_auto_use">自动用料</string>
+    <string name="stop_auto_use">取消自动</string>
+    <string name="add5">+5</string>
+    <string name="add1">+1</string>
+    <string name="sub5">-5</string>
+    <string name="sub1">-1</string>
+
+
+    <!--一键入库-->
+    <string name="submit">入库</string>
+    <string name="out_code">出库单编号</string>
+    <string name="material_number">物料数量</string>
+    <string name="seat_code">库位编码</string>
+    <string name="submit_oper">入库操作</string>
+
+
+
+    <!-- 登录界面-->
+    <string name = "welcome">欢迎使用明匠智能系统</string>
+    <string name="scan_user">请扫描用户工牌...</string>
+
+    <string name="weld">超声波焊接机</string>
+    <string name="perfusion_machine">灌注机</string>
+    <string name="foaming_machine">箱体发泡机</string>
+    <!-- 真空焊接机信息 -->
+    <string name="device_name">设备名称</string>
+    <string name="post">岗位</string>
+    <string name="pre_step">前置工序</string>
+    <string name="af_step">后置工序</string>
+    <string name="equip_status">设备状态</string>
+
+    <!-- 检修-->
+    <string name="check_plan">检修计划</string>
+    <string name="check_time">检修时间</string>
+    <string name="check_content">检修内容</string>
+
+    <!-- 检修测试数据-->
+    <string name="check_plan_value">无</string>
+    <string name="check_time_value">无</string>
+    <string name="check_content_value">无</string>
+
+    <string name="product_number">产品号:</string>
+    <string name="order_number">订单号:</string>
+    <string name="step">工序:</string>
+
+    <string name="material_specification">物料规格:</string>
+    <string name="supplier">供应商:</string>
+    <string name="fitters">装配工:</string>
+    <string name="inspection_station">检测工:</string>
+    <string name="results">质检结果:</string>
+    <string name="device_number">设备号:</string>
+
+
+
+
+    <string name="tube_code">管子编码：</string>
+    <string name="tube_diameter">管子直径：</string>
+    <string name="tube_thick">管子壁厚：</string>
+    <string name="counter">计数器：</string>
+
+    <string name="weld_thick">焊接壁厚</string>
+    <string name="weld_time">焊接时间</string>
+    <string name="weld_power">焊接能量</string>
+
+    <string name="thick_unit">MM</string>
+    <string name="time_unit">S</string>
+    <string name="power_unit">Ws</string>
+
+
+    <!-- 串口扫描信息-->
+    <string name="waiting_scan">等待扫描</string>
+    <string name="scan_data">二维码信息：</string>
+    <string name="part">部 件 清 单</string>
+    <string name="protectRequirement">防 护 要 点</string>
+    <string name="industryHighlight">工 艺 要 求</string>
+    <string name="useTool">工 具 / 工 装</string>
+    <string name="precautionTtile">上岗安全须知及班前班后注意事项</string>
+    <string name="operationStap">操作步骤及作简图</string>
+
+    <string name="update">刷新</string>
+</resources>

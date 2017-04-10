@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--型号-->
+    <TextView
+        android:id="@+id/tv_print_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/Theme.MJ.Default.SettingTextView"
+        android:gravity="center"
+        android:text="型号"/>
+
+    <!--二维码-->
+    <TextView
+        android:id="@+id/tv_print_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/Theme.MJ.Default.SettingTextView"
+        android:gravity="center" />
+
+    <!--状态-->
+    <TextView
+        android:id="@+id/tv_print_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/Theme.MJ.Default.SettingTextView"
+        android:gravity="center"
+        android:text="状态"/>
+
+</LinearLayout>

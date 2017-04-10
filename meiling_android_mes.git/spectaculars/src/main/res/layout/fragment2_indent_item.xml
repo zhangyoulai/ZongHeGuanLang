@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/fragment_bg"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/fragment_bg"/>
+        <TextView
+            android:id="@+id/fragment2_item_textview1"
+            style="@style/textview_indent_style1"
+            android:text="订单号" />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/fragment_bg"/>
+
+        <TextView
+            android:id="@+id/fragment2_item_textview3"
+            style="@style/textview_indent_style1"
+            android:text="生产线" />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/fragment_bg"/>
+
+
+        <TextView
+            android:id="@+id/fragment2_item_textview4"
+            style="@style/textview_indent_style1"
+            android:text="出口评审号" />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/fragment_bg"/>
+
+        <TextView
+            android:id="@+id/fragment2_item_textview5"
+            style="@style/textview_indent_style1"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="出口国家" />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/fragment_bg"/>
+
+
+        <TextView
+            android:id="@+id/fragment2_item_textview6"
+            style="@style/textview_indent_style1"
+            android:text="成品代码" />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/fragment_bg"/>
+
+        <TextView
+            android:id="@+id/fragment2_item_textview7"
+            style="@style/textview_indent_style1"
+            android:text="定制化订单"
+            />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/fragment_bg"/>
+
+
+        <TextView
+            android:id="@+id/fragment2_item_textview8"
+            style="@style/textview_indent_style1"
+            android:text="订单数量" />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/fragment_bg"/>
+
+        <TextView
+            android:id="@+id/fragment2_item_textview2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:text="批次号" />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/fragment_bg"/>
+        <TextView
+            android:id="@+id/fragment2_item_textview9"
+            style="@style/textview_indent_style1"
+            android:text="完成数量" />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/fragment_bg"/>
+
+        <TextView
+            android:id="@+id/fragment2_item_textview10"
+            style="@style/textview_indent_style1"
+            android:text="完成率" />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/fragment_bg"/>
+
+        <TextView
+            android:id="@+id/fragment2_item_textview11"
+            style="@style/textview_indent_style1"
+            android:text="完成日期" />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/fragment_bg"/>
+
+        <TextView
+            android:id="@+id/fragment2_item_textview12"
+            style="@style/textview_indent_style1"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="备注"
+            />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/fragment_bg"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/fragment_bg"/>
+</LinearLayout>
