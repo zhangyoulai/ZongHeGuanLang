@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Search_View">
+        <attr name="textString"  format="string"></attr>
+        <attr name="colorValue" format="color"></attr>
+        <attr name="textSize" format = "dimension"></attr>
+    </declare-styleable>
+    <declare-styleable name="Search_Listview">
+        <!--<attr name="textString"  format="string"></attr>-->
+        <!--<attr name="colorValue" format="color"></attr>-->
+        <!--<attr name="textSize" format = "dimension"></attr>-->
+    </declare-styleable>
+</resources>
